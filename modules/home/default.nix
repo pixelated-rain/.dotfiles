@@ -20,7 +20,6 @@
     ./obsidian.nix
     ./packages.nix                    # other packages
     ./rofi.nix                        # launcher
-    ./scripts/scripts.nix             # personal scripts
     ./starship.nix                    # shell prompt
     ./swaylock.nix                    # lock screen
     ./swayosd.nix                     # brightness / volume wiget
