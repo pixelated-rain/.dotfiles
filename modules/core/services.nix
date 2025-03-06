@@ -1,22 +1,43 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
+  # Services to start
   services = {
-    gvfs.enable = true;
-    gnome = {
-      tinysparql.enable = true;
-      gnome-keyring.enable = true;
-    };
-    dbus.enable = true;
+    libinput.enable = true;
     fstrim.enable = true;
+    gvfs.enable = true;
+    openssh.enable = true;
+    flatpak.enable = true;
+    blueman.enable = true;
 
-    # needed for GNOME services outside of GNOME Desktop
-    dbus.packages = with pkgs; [
-      gcr
-      gnome-settings-daemon
-    ];
+    smartd = {
+      enable = false;
+      autodetect = true;
+    };
+    printing = {
+      enable = true;
+      drivers = [
+        # pkgs.hplipWithPlugin
+      ];
+    };
+    gnome.gnome-keyring.enable = true;
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+      openFirewall = true;
+    };
+    ipp-usb.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
   };
-  services.logind.extraConfig = ''
-    # don’t shutdown when power button is short-pressed
-    HandlePowerKey=ignore
-  '';
+
+  systemd.services.flatpak-repo = {
+    wantedBy = ["multi-user.target"];
+    path = [pkgs.flatpak];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
+  };
 }

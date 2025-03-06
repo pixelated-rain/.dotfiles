@@ -1,66 +1,79 @@
 {
-  description = "charlie's nixos configuration";
+  description = "ZaneyOS";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nur.url = "github:nix-community/NUR";
-
-    hypr-contrib.url = "github:hyprwm/contrib";
-    hyprpicker.url = "github:hyprwm/hyprpicker";
-
-    alejandra.url = "github:kamadorueda/alejandra/3.0.0";
-
-    nix-gaming.url = "github:fufexan/nix-gaming";
-
-    hyprland = {
-      type = "git";
-      url = "https://github.com/hyprwm/Hyprland";
-      submodules = true;
-    };
-
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
-
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
-    catppuccin.url = "github:catppuccin/nix";
-
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nur.url = "github:nix-community/NUR";
     nvf.url = "github:notashelf/nvf";
+    stylix.url = "github:danth/stylix/release-24.11";
+    yazi-plugins = {
+      url = "github:yazi-rs/plugins";
+      flake = false;
+    };
   };
 
-  outputs =
-    { nixpkgs, self, ... }@inputs:
-    let
-      username = "charlie";
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
+  outputs = {nixpkgs, ...} @ inputs: let
+    system = "x86_64-linux";
+    host = "charlie";
+    profile = "nvidia";
+    username = "charlie";
+  in {
+    nixosConfigurations = {
+      amd = nixpkgs.lib.nixosSystem {
         inherit system;
-        config.allowUnfree = true;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [./profiles/amd];
       };
-      lib = nixpkgs.lib;
-    in
-    {
-      nixosConfigurations = {
-        desktop = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [ ./hosts/desktop ];
-          specialArgs = {
-            host = "desktop";
-            inherit self inputs username;
-          };
+      nvidia = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
         };
-        laptop = nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [ ./hosts/laptop ];
-          specialArgs = {
-            host = "laptop";
-            inherit self inputs username;
-          };
+        modules = [./profiles/nvidia];
+      };
+      nvidia-laptop = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
         };
+        modules = [./profiles/nvidia-laptop];
+      };
+      intel = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [./profiles/intel];
+      };
+      vm = nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = {
+          inherit inputs;
+          inherit username;
+          inherit host;
+          inherit profile;
+        };
+        modules = [./profiles/vm];
       };
     };
+  };
 }

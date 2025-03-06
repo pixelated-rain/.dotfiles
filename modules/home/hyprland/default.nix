@@ -1,10 +1,9 @@
-{ inputs, ... }:
-{
+{...}: {
   imports = [
-    ./hyprland.nix
     ./config.nix
+    ./hypridle.nix
+    ./hyprland.nix
     ./hyprlock.nix
-    ./variables.nix
-    inputs.hyprland.homeManagerModules.default
+    ./pyprland.nix
   ];
 }

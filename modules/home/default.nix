@@ -1,33 +1,35 @@
-{inputs, username, host, ...}: {
+{...}: {
   imports = [
-    ./bat.nix                         # better cat command
-    ./browser.nix                     # firefox based browser
-    ./btop.nix                        # resouces monitor 
-    ./catppuccin.nix		      # theme
-    ./cava.nix                        # audio visualizer
-    ./discord/discord.nix             # discord (webcord)
-    ./fastfetch.nix                   # fetch tool
-    ./fzf.nix                         # fuzzy finder
-    ./gaming.nix                      # packages related to gaming
-    ./git.nix                         # version control
-    ./gnome.nix                       # gnome apps
-    ./gtk.nix                         # gtk theme
-    ./hyprland                        # window manager
-    ./kitty.nix                       # terminal
+    ./bash.nix
+    ./bat.nix
+    ./browser.nix
+    ./btop.nix
+    ./cava.nix
+    ./codium.nix
+    ./discord.nix
+    ./emoji.nix
+    ./fastfetch
+    ./gh.nix
+    ./ghostty.nix
+    ./git.nix
+    ./gtk.nix
+    ./hyprland
+    ./kitty.nix
     ./lazygit.nix
-    ./nemo.nix                        # file manager
-    ./nvim.nix                        # neovim editor
+    ./nano.nix
+    ./nvf.nix
     ./obsidian.nix
-    ./packages.nix                    # other packages
-    ./rofi.nix                        # launcher
-    ./starship.nix                    # shell prompt
-    ./swaylock.nix                    # lock screen
-    ./swayosd.nix                     # brightness / volume wiget
-    ./swaync/swaync.nix               # notification deamon
-    ./vscodium.nix                    # vscode forck
-    ./waybar                          # status bar
-    ./waypaper.nix                    # GUI wallpaper picker
-    ./xdg-mimes.nix                   # xdg config
-    ./zsh                             # shell
+    ./rofi
+    ./qt.nix
+    ./scripts
+    ./starship.nix
+    ./stylix.nix
+    ./swaync.nix
+    ./virtmanager.nix
+    ./waybar.nix
+    ./wlogout
+    ./xdg.nix
+    ./yazi.nix
+    ./zsh.nix
   ];
 }

@@ -1,27 +1,25 @@
-{
-  inputs,
-  nixpkgs,
-  self,
-  username,
-  host,
-  ...
-}:
-{
+{inputs, ...}: {
   imports = [
-    ./bootloader.nix
+    ./boot.nix
+    ./fonts.nix
+    ./greetd.nix
     ./hardware.nix
-    ./xserver.nix
     ./network.nix
+    ./nfs.nix
     ./nh.nix
-    ./pipewire.nix
-    ./program.nix
+    ./packages.nix
     ./security.nix
     ./services.nix
+    ./starfish.nix
     ./steam.nix
+    ./stylix.nix
+    ./syncthing.nix
     ./system.nix
-    ./flatpak.nix
     ./user.nix
-    ./wayland.nix
-    ./virtualization.nix
+    ./virtualisation.nix
+    # ./vpn.nix # currently broken; TODO get this fixed
+    ./xdg.nix
+    ./xserver.nix
+    inputs.stylix.nixosModules.stylix
   ];
 }

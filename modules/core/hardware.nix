@@ -1,21 +1,18 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   hardware = {
-    graphics = {
+    sane = {
       enable = true;
-      extraPackages = with pkgs; [
-        intel-media-driver
-        (vaapiIntel.override { enableHybridCodec = true; })
-        vaapiVdpau
-        libvdpau-va-gl
-      ];
+      extraBackends = [ pkgs.sane-airscan ];
+      disabledDefaultBackends = [ "escl" ];
     };
-
-    nvidia = {
-      modesetting.enable = true;
-      open = true;
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
-    };
+    logitech.wireless.enable = false;
+    logitech.wireless.enableGraphical = false;
+    graphics.enable = true;
+    enableRedistributableFirmware = true;
+    keyboard.qmk.enable = true;
+    bluetooth.enable = true;
+    bluetooth.powerOnBoot = true;
   };
-  hardware.enableRedistributableFirmware = true;
+  local.hardware-clock.enable = false;
 }
