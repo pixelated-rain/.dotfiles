@@ -17,7 +17,7 @@
     ./kitty.nix
     ./lazygit.nix
     ./nano.nix
-    ./nvf.nix
+    ./neovim.nix
     ./obsidian.nix
     ./rofi
     ./qt.nix
