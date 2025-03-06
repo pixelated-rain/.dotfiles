@@ -8,6 +8,6 @@
     withPython3 = true;
     defaultEditor = true;
 
-    extraConfig = lib.fileContents ~/.dotfiles/modules/home/nvim/init.lua;
+    extraConfig = lib.fileContents ./nvim/init.lua;
   };
 }
