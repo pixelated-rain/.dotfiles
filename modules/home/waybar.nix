@@ -1,3 +1,4 @@
+# DEPRECATED FILE. MOVED TO FOLDER ./waybar.
 {
   pkgs,
   lib,
@@ -36,14 +37,26 @@ in
           ];
 
           "hyprland/workspaces" = {
-            format = "{name}";
+            format = "{icon}";
             format-icons = {
-              default = " ";
-              active = " ";
-              urgent = " ";
+              #default = " ";
+              #active = " ";
+              #urgent = " ";
+              "1" = "一";
+              "2" = "二";
+              "3" = "三";
+              "4" = "四";
+              "5" = "五";
+              "6" = "六";
+              "7" = "七";
+              "8" = "八";
+              "9" = "九";
+              "10" = "十";
             };
-            on-scroll-up = "hyprctl dispatch workspace e+1";
-            on-scroll-down = "hyprctl dispatch workspace e-1";
+            #on-scroll-up = "hyprctl dispatch workspace e+1";
+            #on-scroll-down = "hyprctl dispatch workspace e-1";
+            disable-scroll = true;
+            show-specal = false;
           };
           "clock" = {
             format =
@@ -91,7 +104,7 @@ in
             spacing = 12;
           };
           "pulseaudio" = {
-            format = "{icon} {volume}% {format_source}";
+            format = "{icon}{volume}% {format_source}";
             format-bluetooth = "{volume}% {icon} {format_source}";
             format-bluetooth-muted = " {icon} {format_source}";
             format-muted = " {format_source}";
@@ -180,10 +193,11 @@ in
           };
         }
       ];
+      # JetBrainsMono Nerd Font Mono replaced
       style = concatStrings [
         ''
           * {
-            font-family: JetBrainsMono Nerd Font Mono;
+            font-family: Fira Code Nerd;
             font-size: 16px;
             border-radius: 0px;
             border: none;
