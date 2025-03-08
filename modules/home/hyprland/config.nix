@@ -45,6 +45,7 @@ in {
 
       general = {
         "$modifier" = "SUPER";
+        "$term" = "kitty";
         layout = "dwindle";
         gaps_in = 6;
         gaps_out = 8;
@@ -138,38 +139,38 @@ in {
         "$modifier,right,movefocus,r"
         "$modifier,up,movefocus,u"
         "$modifier,down,movefocus,d"
-        "$modifier,1,workspace,1"
-        "$modifier,2,workspace,2"
-        "$modifier,3,workspace,3"
-        "$modifier,4,workspace,4"
-        "$modifier,5,workspace,5"
-        "$modifier,6,workspace,6"
-        "$modifier,7,workspace,7"
-        "$modifier,8,workspace,8"
-        "$modifier,9,workspace,9"
-        "$modifier,0,workspace,10"
+        "$modifier,code:10,workspace,1"
+        "$modifier,code:11,workspace,2"
+        "$modifier,code:12,workspace,3"
+        "$modifier,code:13,workspace,4"
+        "$modifier,code:14,workspace,5"
+        "$modifier,code:15,workspace,6"
+        "$modifier,code:16,workspace,7"
+        "$modifier,code:17,workspace,8"
+        "$modifier,code:18,workspace,9"
+        "$modifier,code:19,workspace,10"
         "$modifier CONTROL,SPACE,movetoworkspace,special"
         "$modifier,SPACE,togglespecialworkspace"
-        "$modifier SHIFT,1,movetoworkspace,1"
-        "$modifier SHIFT,2,movetoworkspace,2"
-        "$modifier SHIFT,3,movetoworkspace,3"
-        "$modifier SHIFT,4,movetoworkspace,4"
-        "$modifier SHIFT,5,movetoworkspace,5"
-        "$modifier SHIFT,6,movetoworkspace,6"
-        "$modifier SHIFT,7,movetoworkspace,7"
-        "$modifier SHIFT,8,movetoworkspace,8"
-        "$modifier SHIFT,9,movetoworkspace,9"
-        "$modifier SHIFT,0,movetoworkspace,10"
-        "$modifier CONTROL,1,movetoworkspacesilent,1"
-        "$modifier CONTROL,2,movetoworkspacesilent,2"
-        "$modifier CONTROL,3,movetoworkspacesilent,3"
-        "$modifier CONTROL,4,movetoworkspacesilent,4"
-        "$modifier CONTROL,5,movetoworkspacesilent,5"
-        "$modifier CONTROL,6,movetoworkspacesilent,6"
-        "$modifier CONTROL,7,movetoworkspacesilent,7"
-        "$modifier CONTROL,8,movetoworkspacesilent,8"
-        "$modifier CONTROL,9,movetoworkspacesilent,9"
-        "$modifier CONTROL,0,movetoworkspacesilent,10"
+        "$modifier SHIFT,code:10,movetoworkspace,1"
+        "$modifier SHIFT,code:11,movetoworkspace,2"
+        "$modifier SHIFT,code:12,movetoworkspace,3"
+        "$modifier SHIFT,code:13,movetoworkspace,4"
+        "$modifier SHIFT,code:14,movetoworkspace,5"
+        "$modifier SHIFT,code:15,movetoworkspace,6"
+        "$modifier SHIFT,code:16,movetoworkspace,7"
+        "$modifier SHIFT,code:17,movetoworkspace,8"
+        "$modifier SHIFT,code:18,movetoworkspace,9"
+        "$modifier SHIFT,code:19,movetoworkspace,10"
+        "$modifier CONTROL,code:10,movetoworkspacesilent,1"
+        "$modifier CONTROL,code:11,movetoworkspacesilent,2"
+        "$modifier CONTROL,code:12,movetoworkspacesilent,3"
+        "$modifier CONTROL,code:13,movetoworkspacesilent,4"
+        "$modifier CONTROL,code:14,movetoworkspacesilent,5"
+        "$modifier CONTROL,code:15,movetoworkspacesilent,6"
+        "$modifier CONTROL,code:16,movetoworkspacesilent,7"
+        "$modifier CONTROL,code:17,movetoworkspacesilent,8"
+        "$modifier CONTROL,code:18,movetoworkspacesilent,9"
+        "$modifier CONTROL,code:19,movetoworkspacesilent,10"
         "$modifier,mouse_down,workspace, e+1"
         "$modifier,mouse_up,workspace, e-1"
         "ALT,Tab,cyclenext"
@@ -254,6 +255,12 @@ in {
         "keepaspectratio, title:^(Picture-in-Picture)$"
         "noblur, tag:games*"
         "fullscreen, tag:games*"
+
+        # workspace rules
+        "workspace 2, tag:browser"
+        "workspace 5, tag:games"
+        "workspace 5, tag:gamestore"
+        "workspace 7, tag:im"
       ];
 
       env = [
@@ -269,6 +276,13 @@ in {
         "QT_AUTO_SCREEN_SCALE_FACTOR, 1"
         "SDL_VIDEODRIVER, x11"
         "MOZ_ENABLE_WAYLAND, 1"
+
+        # Nvidia settings
+        "LIBVA_DRIVER_NAME,nvidia"
+        "__GLX_VENDOR_LIBRARY_NAME,Nvidia"
+        "__GL_VRR_ALLOWED,1"
+        "WLR_NO_HARDWARE_CURSORS,1"
+        "WLR_DRM_NO_ATOMIC,1"
       ];
     };
 

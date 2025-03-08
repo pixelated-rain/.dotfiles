@@ -56,9 +56,9 @@ in
           "hyprland/window" = {
             max-length = 22;
             separate-outputs = false;
-            #rewrite = {
-            #  "" = " 🙈 No Windows? ";
-            #};
+            rewrite = {
+              "" = " Nothing ";
+            };
           };
           "memory" = {
             interval = 5;

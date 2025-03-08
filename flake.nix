@@ -1,5 +1,5 @@
 {
-  description = "ZaneyOS";
+  description = "charlie's nix config (based on ZaneyOS)";
 
   inputs = {
     home-manager = {

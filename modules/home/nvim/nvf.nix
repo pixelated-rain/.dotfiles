@@ -1,4 +1,5 @@
 {
+  pkgs,
   inputs,
   config,
   ...
@@ -9,6 +10,14 @@
     enable = true;
 
     settings.vim = {
+      extraPackages = with pkgs; [
+        git
+        fzf
+        ripgrep
+        fd
+        zoxide
+      ];
+
       vimAlias = true;
       viAlias = true;
       withNodeJs = true;
@@ -19,47 +28,12 @@
         wrap = false;
       };
 
-      keymaps = [
-        {
-          key = "jk";
-          mode = ["i"];
-          action = "<ESC>";
-          desc = "Exit insert mode";
-        }
-        {
-          key = "<leader>nh";
-          mode = ["n"];
-          action = ":nohl<CR>";
-          desc = "Clear search highlights";
-        }
-        {
-          key = "<leader>ff";
-          mode = ["n"];
-          action = "<cmd>Telescope find_files<cr>";
-          desc = "Search files by name";
-        }
-        {
-          key = "<leader>lg";
-          mode = ["n"];
-          action = "<cmd>Telescope live_grep<cr>";
-          desc = "Search files by contents";
-        }
-        {
-          key = "<leader>fe";
-          mode = ["n"];
-          action = "<cmd>Neotree toggle<cr>";
-          desc = "File browser toggle";
-        }
-      ];
-
       theme = {
         enable = true;
-        name = "dracula";
-        style = "dark";
+        name = "catppuccin";
+        style = "mocha";
         transparent = true;
       };
-
-      telescope.enable = true;
 
       spellcheck = {
         enable = true;
@@ -72,24 +46,10 @@
         lspsaga.enable = false;
         trouble.enable = true;
         lspSignature.enable = true;
-        otter-nvim.enable = false;
+        otter-nvim.enable = true;
         lsplines.enable = false;
         nvim-docs-view.enable = false;
-      };
-
-      languages = {
-        enableLSP = true;
-        enableFormat = true;
-        enableTreesitter = true;
-        enableExtraDiagnostics = true;
-
-        nix.enable = true;
-        clang.enable = true;
-        zig.enable = true;
-        python.enable = true;
-        markdown.enable = true;
-        ts.enable = true;
-        html.enable = true;
+        lspconfig.enable = true;
       };
 
       visuals = {
@@ -105,12 +65,11 @@
       statusline = {
         lualine = {
           enable = true;
-          theme = "dracula";
+          theme = "catppuccin";
         };
       };
 
       autopairs.nvim-autopairs.enable = true;
-
       autocomplete.nvim-cmp.enable = true;
       snippets.luasnip.enable = true;
 
@@ -120,25 +79,27 @@
 
       treesitter.context.enable = true;
 
-      binds = {
-        whichKey.enable = true;
-        cheatsheet.enable = true;
-      };
-
       git = {
         enable = true;
         gitsigns.enable = true;
-        gitsigns.codeActions.enable = false; # throws an annoying debug message
+        gitsigns.codeActions.enable = true;
       };
 
       projects.project-nvim.enable = true;
       dashboard.dashboard-nvim.enable = true;
 
-      filetree.neo-tree.enable = true;
+      notes = {
+        todo-comments = {
+          enable = true;
+          setupOpts = {
+            signs = true;
+          };
+        };
+      };
 
       notify = {
-        nvim-notify.enable = true;
-        nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
+        nvim-notify.enable = false;
+        # nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
       };
 
       utility = {
@@ -148,13 +109,19 @@
         surround.enable = true;
         diffview-nvim.enable = true;
         motion = {
-          hop.enable = true;
-          leap.enable = true;
+          hop = {
+            enable = true;
+            mappings.hop = null;
+          };
+          leap.enable = false;
           precognition.enable = false;
         };
 
-        images = {
-          image-nvim.enable = false;
+        images.image-nvim = {
+          enable = false;
+          setupOpts = {
+            backend = "kitty";
+          };
         };
       };
 

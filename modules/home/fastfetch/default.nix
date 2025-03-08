@@ -8,7 +8,7 @@
           keys = "35";
           output = "95";
         };
-        separator = " ➜ ";
+        separator = "  "; # " ➜ ";
       };
 
       logo = {
@@ -24,105 +24,106 @@
 
       modules = [
         "break"
+        "break"
+        {
+          type = "custom";
+          format = "┌──────────────────── OS ────────────────────┐";
+          outputColor = "35";
+        }
         {
           type = "os";
-          key = "OS   ";
-          keyColor = "31";
+          key = "├─ 󰊟 ";
         }
         {
           type = "kernel";
-          key = " ├  ";
-          keyColor = "31";
+          key = "├─  ";
         }
         {
           type = "packages";
-          key = " ├ 󰏖 ";
-          keyColor = "31";
+          key = "├─ 󰏖 ";
         }
         {
           type = "shell";
-          key = " └  ";
-          keyColor = "31";
+          key = "├─  ";
         }
-        "break"
+        {
+          type = "custom";
+          format = "├──────────────────── WM ────────────────────┤";
+          outputColor = "35";
+        }
         {
           type = "wm";
-          key = "WM   ";
-          keyColor = "32";
+          key = "├─  ";
         }
         {
           type = "wmtheme";
-          key = " ├ 󰉼 ";
-          keyColor = "32";
+          key = "├─ 󰉼 ";
         }
         {
           type = "icons";
-          key = " ├ 󰀻 ";
-          keyColor = "32";
+          key = "├─ 󰀻 ";
         }
         {
           type = "cursor";
-          key = " ├  ";
-          keyColor = "32";
+          key = "├─  ";
         }
         {
           type = "terminal";
-          key = " ├  ";
-          keyColor = "32";
+          key = "├─  ";
         }
         {
           type = "terminalfont";
-          key = " └  ";
-          keyColor = "32";
+          key = "├─  ";
         }
-        "break"
         {
-          type = "host";
-          format = "{5} {1} Type {2}";
-          key = "PC   ";
-          keyColor = "33";
+          type = "custom";
+          format = "├───────────────── Hardware ─────────────────┤";
+          outputColor = "35";
         }
         {
           type = "cpu";
           format = "{1} ({3}) @ {7}";
-          key = " ├  ";
-          keyColor = "33";
+          key = "├─  ";
         }
         {
           type = "gpu";
           format = "{1} {2}";
-          key = " ├ 󰢮 ";
-          keyColor = "33";
+          key = "├─ 󰢮 ";
         }
         {
           type = "memory";
-          key = " ├  ";
-          keyColor = "33";
+          key = "├─  ";
         }
         {
           type = "disk";
-          key = " ├ 󰋊 ";
-          keyColor = "33";
+          key = "├─ 󰋊 ";
         }
         {
-          type = "monitor";
-          key = " └  ";
-          keyColor = "33";
+          type = "display"; # "monitor";
+          key = "├─  ";
+        }
+        #{
+        #  type = "player";
+        #  key = "├─ 󰥠 ";
+        #}
+        #{
+        #  type = "media";
+        #  key = "├─ 󰝚 ";
+        #}
+        {
+          type = "custom";
+          format = "└────────────────────────────────────────────┘";
+          outputColor = "35";
         }
         {
-          type = "player";
-          key = " └ 󰥠 ";
-          keyColor = "33";
-        }
-        {
-          type = "media";
-          key = " └ 󰝚 ";
-          keyColor = "33";
+          type = "colors";
+          symbol = "circle";
+          paddingLeft = 1;
         }
         "break"
         {
           type = "uptime";
-          key = "   Uptime   ";
+          key = " Uptime";
         }
       ];
     };
