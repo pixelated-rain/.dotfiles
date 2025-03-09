@@ -22,9 +22,9 @@
       in {
         "*" = {
           bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
-          bg-alt = mkLiteral "#${config.stylix.base16Scheme.base09}";
+          bg-alt = mkLiteral "#${config.stylix.base16Scheme.base0D}";
           foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
-          selected = mkLiteral "#${config.stylix.base16Scheme.base08}";
+          selected = mkLiteral "#${config.stylix.base16Scheme.base0E}";
           active = mkLiteral "#${config.stylix.base16Scheme.base0B}";
           text-selected = mkLiteral "#${config.stylix.base16Scheme.base00}";
           text-color = mkLiteral "#${config.stylix.base16Scheme.base05}";

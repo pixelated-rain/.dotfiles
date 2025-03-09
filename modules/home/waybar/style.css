@@ -137,6 +137,8 @@ window#waybar.empty #window {
 #disk,
 #idle_inhibitor {
   color: @text;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 #idle_inhibitor.activated {
   color: @green;
