@@ -51,7 +51,7 @@ in {
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
+        "col.active_border" = "rgb(${config.lib.stylix.colors.base0E}) rgb(${config.lib.stylix.colors.base0D}) 45deg";
         "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
@@ -125,6 +125,7 @@ in {
         "$modifier SHIFT,P,pseudo,"
         "$modifier SHIFT,I,togglesplit,"
         "$modifier,F,fullscreen,"
+        "$modifier CTRL,B,exec,pkill -SIGUSR1 waybar || waybar"
         "$modifier CONTROL,F,togglefloating,"
         "$modifier CONTROL,C,exit,"
         "$modifier CONTROL,left,movewindow,l"
@@ -185,6 +186,11 @@ in {
         ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
         ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
       ];
+
+      binds = {
+        workspace_back_and_forth = true;
+        allow_workspace_cycles = true;
+      };
 
       bindm = [
         "$modifier, mouse:272, movewindow"

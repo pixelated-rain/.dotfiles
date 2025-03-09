@@ -20,6 +20,7 @@
        if [ -f $HOME/.zshrc-personal ]; then
           source $HOME/.zshrc-personal
        fi
+      pokeget shaymin --hide-name
     '';
 
     shellAliases = {

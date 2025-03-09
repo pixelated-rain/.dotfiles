@@ -59,6 +59,7 @@
     pciutils
     picard
     pkg-config
+    pokeget-rs
     playerctl
     ripgrep
     socat

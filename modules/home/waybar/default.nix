@@ -3,6 +3,7 @@
   host,
   ...
 }: let
+  cava_mviz = ./cava_mviz.sh;
   inherit (import ../../../hosts/${host}/variables.nix) clock24h;
 in {
   # Configure & Theme Waybar
@@ -17,28 +18,160 @@ in {
         passthrough = false;
         spacing = 4;
         fixed-center = true;
-        ipc = true;
+        #modules-left = [
+        #  "custom/separator#blank"
+        #  # for this one to come back, it needs to be a more consistent size
+        #  #"hyprland/window"
+        #  #"custom/separator#dot-line"
+        #  "tray"
+        #  "custom/separator#blank"
+        #];
         modules-center = [
-          "custom/notification"
-          "custom/separator#dot-line"
-          "custom/cava_mviz"
+          "custom/separator#blank"
+          "cava"
           "custom/separator#dot-line"
           "clock"
           "custom/separator#dot-line"
           "hyprland/workspaces"
           "custom/separator#dot-line"
           "idle_inhibitor"
+          "custom/separator#blank"
         ];
-        modules-left = [
-          "custom/power"
+        modules-right = [
+          "custom/separator#blank"
+          "custom/swaync"
           "custom/separator#dot-line"
           "tray"
+          "custom/separator#dot-line"
+          "custom/power"
+          "custom/separator#blank"
         ];
-        #modules-right = [
-        #];
+
+        # kanji numbers for workspaces
+        "hyprland/workspaces" = {
+          format = "{icon}";
+          format-icons = {
+            "1" = "一";
+            "2" = "二";
+            "3" = "三";
+            "4" = "四";
+            "5" = "五";
+            "6" = "六";
+            "7" = "七";
+            "8" = "八";
+            "9" = "九";
+            "10" = "十";
+          };
+          disable-scroll = true;
+          show-special = false;
+
+          # TODO:make the below data a host variable
+
+          # for machines with one monitor
+          persistent-workspaces = {
+            "*" = 5;
+          };
+        };
+
+        "tray" = {
+          spacing = 12;
+        };
+
+        "idle_inhibitor" = {
+          tooltip = false;
+          format = "{icon}";
+          format-icons = {
+            activated = " ";
+            deactivated = " ";
+          };
+        };
+
+        "clock" = {
+          format =
+            if clock24h
+            then ''  {:L%H:%M}''
+            else ''  {:L%I:%M %p}'';
+          tooltip = true;
+          tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
+        };
+
+        "cava" = {
+          framerate = 30;
+          autosens = 1;
+          # sensitivity = 1;
+          bars = 14;
+          method = "pulse";
+          source = "auto";
+          stereo = true;
+          reverse = false;
+          bar_delimiter = 0;
+          monstercat = false;
+          lower_cutoff_freq = 75;
+          higher_cutoff_freq = 10000;
+          noise_reduction = 0.8;
+          input_delay = 2;
+          format-icons = [
+            "▁"
+            "▂"
+            "▃"
+            "▄"
+            "▅"
+            "▆"
+            "▇"
+            "█"
+          ];
+          actions = {
+            on-click-right = "mode";
+          };
+        };
+
+        # custom modules
+        # most of these are stolen from JaKooLit.
+
+        # does not work.
+        "custom/cava_mviz" = {
+          exec = "${cava_mviz}";
+          format = "{}";
+        };
+        "custom/swaync" = {
+          tooltip = false;
+          format = "{icon} {}";
+          format-icons = {
+            notification = "<span foreground='red'><sup></sup></span>";
+            none = "";
+            dnd-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-none = "";
+            inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            inhibited-none = "";
+            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+            dnd-inhibited-none = "";
+          };
+          return-type = "json";
+          exec-if = "which swaync-client";
+          exec = "swaync-client -swb";
+          on-click = "sleep 0.1 && swaync-client -t -sw";
+          on-click-right = "swaync-client -d -sw";
+          escape = true;
+        };
+
+        "custom/separator#dot-line" = {
+          format = "";
+          interval = "once";
+          tooltip = false;
+        };
+        "custom/separator#blank" = {
+          format = " ";
+          interval = "once";
+          tooltip = false;
+        };
+
+        "custom/power" = {
+          tooltip = false;
+          format = "";
+          on-click = "sleep 0.1 && wlogout";
+        };
       }
     ];
-    # JetBrainsMono Nerd Font Mono replaced
     style = builtins.readFile ./style.css;
   };
 }
