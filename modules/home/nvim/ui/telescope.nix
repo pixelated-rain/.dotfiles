@@ -40,8 +40,8 @@
       mappings = {
         buffers = "<leader>fb";
         findFiles = "<leader>ff";
-        gitBranches = "<leader>gb";
-        gitStatus = "<leader>gs";
+        gitBranches = null;
+        gitStatus = null;
         liveGrep = "<leader>fg";
       };
     };

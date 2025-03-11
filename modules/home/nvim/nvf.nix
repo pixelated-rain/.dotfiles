@@ -70,7 +70,12 @@
       };
 
       autopairs.nvim-autopairs.enable = true;
-      autocomplete.nvim-cmp.enable = true;
+      autocomplete.nvim-cmp = {
+        enable = true;
+        mappings = {
+          confirm = "<C-y>";
+        };
+      };
       snippets.luasnip.enable = true;
 
       tabline = {
@@ -82,7 +87,7 @@
       git = {
         enable = true;
         gitsigns.enable = true;
-        gitsigns.codeActions.enable = true;
+        gitsigns.codeActions.enable = false;
       };
 
       projects.project-nvim.enable = true;
@@ -145,7 +150,17 @@
       };
 
       comments = {
-        comment-nvim.enable = true;
+        comment-nvim = {
+          enable = true;
+          mappings = {
+            toggleCurrentLine = "<leader>tcc";
+            toggleCurrentBlock = "<leader>tbc";
+            toggleOpLeaderLine = "<leader>tc";
+            toggleOpLeaderBlock = "<leader>tb";
+            toggleSelectedLine = "<leader>tc";
+            toggleSelectedBlock = "<leader>tb";
+          };
+        };
       };
     };
   };

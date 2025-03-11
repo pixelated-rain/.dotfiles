@@ -3,6 +3,7 @@
     ./bash.nix
     ./bat.nix
     ./browser.nix
+    ./btm.nix
     ./btop.nix
     ./cava.nix
     ./codium.nix
