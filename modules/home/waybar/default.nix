@@ -112,14 +112,14 @@ in {
           noise_reduction = 0.8;
           input_delay = 2;
           format-icons = [
-            "<span foreground='#${config.lib.stylix.colors.base0E}'>▁</span>"
-            "<span foreground='#${config.lib.stylix.colors.base0E}'>▂</span>"
-            "<span foreground='#${config.lib.stylix.colors.base0E}'>▃</span>"
+            "<span foreground='#${config.lib.stylix.colors.base0D}'>▁</span>"
+            "<span foreground='#${config.lib.stylix.colors.base0D}'>▂</span>"
+            "<span foreground='#${config.lib.stylix.colors.base0D}'>▃</span>"
             "<span foreground='#${config.lib.stylix.colors.base0D}'>▄</span>"
             "<span foreground='#${config.lib.stylix.colors.base0D}'>▅</span>"
-            "<span foreground='#${config.lib.stylix.colors.base0D}'>▆</span>"
-            "<span foreground='#${config.lib.stylix.colors.base0F}'>▇</span>"
-            "<span foreground='#${config.lib.stylix.colors.base0F}'>█</span>"
+            "<span foreground='#${config.lib.stylix.colors.base0E}'>▆</span>"
+            "<span foreground='#${config.lib.stylix.colors.base0E}'>▇</span>"
+            "<span foreground='#${config.lib.stylix.colors.base0E}'>█</span>"
           ];
           actions = {
             on-click-right = "mode";
