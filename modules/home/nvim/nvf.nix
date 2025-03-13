@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  lib,
   config,
   ...
 }: {
@@ -30,9 +31,9 @@
 
       theme = {
         enable = true;
-        name = "catppuccin";
+        name = lib.mkForce "catppuccin";
         style = "mocha";
-        transparent = true;
+        transparent = lib.mkForce true;
       };
 
       spellcheck = {
@@ -65,7 +66,7 @@
       statusline = {
         lualine = {
           enable = true;
-          theme = "catppuccin";
+          theme = lib.mkForce "catppuccin";
         };
       };
 

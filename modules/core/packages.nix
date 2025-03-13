@@ -52,6 +52,7 @@
     lxqt.lxqt-policykit
     meson
     mpv
+    mullvad-vpn
     ncdu
     ninja
     nixfmt-rfc-style
