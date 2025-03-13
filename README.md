@@ -13,9 +13,64 @@ overhauled, including:
 and more. also, some code (especially that of the waybar) is directly
 taken/converted into nix from
 [JaKooLit's dotfiles](https://github.com/JaKooLit/Hyprland-Dots), specifically,
-the waybar, which is JaKooLit's catppuccin-mocha themed waybar. attributions are
-in comments in every file where code was copied, so feel free to search this
-repo for "JaKooLit" to find where that code is used.
+the waybar, which is a modified version of JaKooLit's catppuccin-mocha themed
+waybar. attributions are in comments in every file where code was copied, so one
+may search this repo for "JaKooLit" to find that code.
 
 because JaKooLit's code is released under the GNU public license but ZaneyOS is
-released under the MIT license, both are included.
+released under the MIT license, both licenses are included.
+
+## how to use
+
+this repo should be cloned into `~/.dotfiles`.
+
+### building this flake
+
+1. ensure NixOS is installed.
+2. ensure that the optional settings `nix-config` and `flake` are enabled.
+3. edit `flake.nix` to ensure the `profile` variable corresponds to the device's
+   hardware. it should be set to one of the names of the folders in
+   `~/.dotfiles/profiles`. let `PROFILE` refer to whatever this is set to.
+4. run the following commands:
+
+```sh
+nix shell nixpkgs#nh
+nh os switch ~/.dotfiles --hostname PROFILE
+```
+
+again, `PROFILE` should be whatever corresponds to the device's graphical
+hardware.
+
+if this flake has already been built and is currently running on the machine,
+run
+
+```sh
+fr
+```
+
+to rebuild after making changes. to update system packages, run
+
+```sh
+fu
+```
+
+instead.
+
+### creating an iso image
+
+to build an iso image out of this flake, run
+
+```nix
+nix build .#nixosConfigurations.iso.config.system.build.isoImage
+```
+
+the output will be stored in `./result/iso/`. to burn this to drive `/dev/sdX`,
+run
+
+```sh
+sudo dd if=~/.dotfiles/result/iso/ISO_NAME.iso bs=16M of=/dev/sdX status=progress oflag=sync
+```
+
+replacing `ISO_NAME.iso` with the actual name of the file located there. be
+warned, running the above command on the wrong drive will ruin a drive. use at
+your own risk.
