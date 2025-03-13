@@ -17,7 +17,6 @@
     ./system.nix
     ./user.nix
     ./virtualisation.nix
-    # ./vpn.nix # currently broken; TODO get this fixed
     ./xdg.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix

@@ -27,6 +27,7 @@
     ./stylix.nix
     ./swaync.nix
     ./virtmanager.nix
+    ./vpn.nix
     ./waybar
     ./wlogout
     ./xdg.nix
