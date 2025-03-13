@@ -61,6 +61,7 @@
     pkg-config
     pokeget-rs
     playerctl
+    qbittorrent-enhanced
     ripgrep
     socat
     unrar
