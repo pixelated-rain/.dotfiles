@@ -25,21 +25,19 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    amfora # Fancy Terminal Browser For Gemini Protocol
-    appimage-run # Needed For AppImage Support
-    brightnessctl # For Screen Brightness Control
-    cmatrix # Matrix Movie Effect In Terminal
-    cowsay # Great Fun Terminal Program
-    docker-compose # Allows Controlling Docker From A Single File
-    duf # Utility For Viewing Disk Usage In Terminal
-    eza # Beautiful ls Replacement
-    ffmpeg # Terminal Video / Audio Editing
-    file-roller # Archive Manager
+    appimage-run
+    cmatrix
+    cowsay
+    docker-compose
+    duf
+    eza
+    ffmpeg
+    file-roller
     fzf
-    gedit # Simple Graphical Text Editor
-    gimp # Great Photo Editor
-    greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
-    htop # Simple Terminal Based System Monitor
+    gedit
+    gimp
+    greetd.tuigreet
+    htop
     hyprpicker
     imv
     inxi
