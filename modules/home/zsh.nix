@@ -22,6 +22,10 @@
        fi
       pokeget shaymin --hide-name
       eval "$(direnv hook zsh)"
+      function dev () {
+        nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#$@"
+        direnv allow
+      }
     '';
 
     shellAliases = {
@@ -36,9 +40,6 @@
       ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       cat = "bat";
       man = "BAT_THEME='default' batman";
-
-      # dev environments using `github:the-nix-way/dev-templates`
-      dev = "echo \"use flake \\\"github:the-nix-way/dev-templates?dir=$1\\\"\" >> .envrc && direnv allow";
 
       l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
