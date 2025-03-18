@@ -17,9 +17,6 @@ the waybar, which is a modified version of JaKooLit's catppuccin-mocha themed
 waybar. attributions are in comments in every file where code was copied, so one
 may search this repo for "JaKooLit" to find that code.
 
-because JaKooLit's code is released under the GNU public license but ZaneyOS is
-released under the MIT license, both licenses are included.
-
 ## how to use
 
 this repo should be cloned into `~/.dotfiles`.
