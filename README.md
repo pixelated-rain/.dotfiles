@@ -1,5 +1,11 @@
 # charlie's dotfiles
 
+[!> [!WARNING]
+
+> don't use these dotfiles if you don't know what you're doing. they can brick
+> your machine. charlie is not responsible if you use them to brick your
+> machine.]
+
 the content of these dotfiles started as a fork of
 [ZaneyOS](https://gitlab.com/Zaney/zaneyos). much of the code in here is still
 explicitly from that repo. however, much of the content has been completely
@@ -57,7 +63,7 @@ instead.
 
 to build an iso image out of this flake, run
 
-```nix
+```sh
 nix build .#nixosConfigurations.iso.config.system.build.isoImage
 ```
 
