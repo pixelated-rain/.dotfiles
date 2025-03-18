@@ -29,14 +29,16 @@
       v = "nvim";
       c = "clear";
       y = "yazi";
-      home = "cd ~";
 
+      # nixos
       fr = "nh os switch ~/.dotfiles --hostname ${profile}";
       fu = "nh os switch ~/.dotfiles --hostname ${profile} --update";
-      zu = "sh <(curl -L https://gitlab.com/Zaney/zaneyos/-/raw/main/install-zaneyos.sh)";
       ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
       cat = "bat";
       man = "BAT_THEME='default' batman";
+
+      # dev environments using `github:the-nix-way/dev-templates`
+      dev = "echo \"use flake \\\"github:the-nix-way/dev-templates?dir=$1\\\"\" >> .envrc && direnv allow";
 
       l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
       ll = "eza --icons  -a --group-directories-first -1 --no-user --long";
