@@ -1,10 +1,9 @@
 # charlie's dotfiles
 
-[!> [!WARNING]
-
+> [!WARNING]
 > don't use these dotfiles if you don't know what you're doing. they can brick
 > your machine. charlie is not responsible if you use them to brick your
-> machine.]
+> machine.
 
 the content of these dotfiles started as a fork of
 [ZaneyOS](https://gitlab.com/Zaney/zaneyos). much of the code in here is still
