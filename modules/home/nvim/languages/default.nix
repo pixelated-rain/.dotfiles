@@ -1,6 +1,6 @@
 _: {
   imports = [
-    #./latex.nix
+    ./latex.nix
     ./lean.nix
     ./markdown.nix
     ./nix.nix

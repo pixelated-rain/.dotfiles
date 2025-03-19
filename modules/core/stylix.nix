@@ -48,5 +48,8 @@
         popups = 12;
       };
     };
+    targets = {
+      grub.enable = false;
+    };
   };
 }
