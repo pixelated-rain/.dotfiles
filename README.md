@@ -14,7 +14,6 @@ overhauled, including:
   [catppuccin](https://catppuccin.com/),
 - a totally different [waybar](https://github.com/Alexays/Waybar),
 - a highly personalized [nvf](https://github.com/NotAShelf/nvf) configuration,
--
 
 and more. also, some code (especially that of the waybar) is directly
 taken/converted into nix from
