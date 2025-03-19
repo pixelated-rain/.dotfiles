@@ -30,7 +30,7 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    host = "charlie";
+    host = "desktop";
     profile = "nvidia";
     username = "charlie";
   in {
