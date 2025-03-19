@@ -42,6 +42,7 @@
     imv
     inxi
     killall
+    krabby
     libnotify
     libvirt
     lm_sensors
@@ -58,7 +59,6 @@
     pciutils
     picard
     pkg-config
-    pokeget-rs
     playerctl
     qbittorrent-enhanced
     ripgrep
