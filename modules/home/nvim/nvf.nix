@@ -8,14 +8,16 @@
   imports = [inputs.nvf.homeManagerModules.default];
 
   programs.nvf = {
+    # basic config
+
     enable = true;
 
     settings.vim = {
       extraPackages = with pkgs; [
-        git
-        fzf
-        ripgrep
         fd
+        fzf
+        git
+        ripgrep
         zoxide
       ];
 
@@ -36,8 +38,22 @@
         transparent = lib.mkForce true;
       };
 
-      spellcheck = {
-        enable = false;
+      # specific package configs
+
+      autopairs.nvim-autopairs.enable = true;
+
+      autocomplete.nvim-cmp = {
+        enable = true;
+      };
+
+      comments.comment-nvim.enable = true;
+
+      dashboard.dashboard-nvim.enable = true;
+
+      git = {
+        enable = true;
+        gitsigns.enable = true;
+        gitsigns.codeActions.enable = false;
       };
 
       lsp = {
@@ -53,47 +69,6 @@
         lspconfig.enable = true;
       };
 
-      visuals = {
-        nvim-web-devicons.enable = true;
-        nvim-cursorline.enable = true;
-        cinnamon-nvim.enable = true;
-        fidget-nvim.enable = true;
-
-        highlight-undo.enable = true;
-        indent-blankline.enable = true;
-      };
-
-      statusline = {
-        lualine = {
-          enable = true;
-          theme = lib.mkForce "catppuccin";
-        };
-      };
-
-      autopairs.nvim-autopairs.enable = true;
-      autocomplete.nvim-cmp = {
-        enable = true;
-        mappings = {
-          confirm = "<C-y>";
-        };
-      };
-      snippets.luasnip.enable = true;
-
-      tabline = {
-        nvimBufferline.enable = true;
-      };
-
-      treesitter.context.enable = true;
-
-      git = {
-        enable = true;
-        gitsigns.enable = true;
-        gitsigns.codeActions.enable = false;
-      };
-
-      projects.project-nvim.enable = true;
-      dashboard.dashboard-nvim.enable = true;
-
       notes = {
         todo-comments = {
           enable = true;
@@ -106,6 +81,35 @@
       notify = {
         nvim-notify.enable = false;
         # nvim-notify.setupOpts.background_colour = "#${config.lib.stylix.colors.base01}";
+      };
+
+      projects.project-nvim.enable = true;
+
+      statusline = {
+        lualine = {
+          enable = true;
+          theme = lib.mkForce "catppuccin";
+        };
+      };
+
+      session = {
+        nvim-session-manager.enable = false;
+      };
+
+      snippets.luasnip.enable = true;
+
+      tabline = {
+        nvimBufferline.enable = true;
+      };
+
+      terminal.toggleterm = {
+        enable = true;
+      };
+
+      treesitter = {
+        enable = true;
+        autotagHtml = true;
+        context.enable = true;
       };
 
       utility = {
@@ -146,22 +150,14 @@
         fastaction.enable = true;
       };
 
-      session = {
-        nvim-session-manager.enable = false;
-      };
+      visuals = {
+        nvim-web-devicons.enable = true;
+        nvim-cursorline.enable = true;
+        cinnamon-nvim.enable = true;
+        fidget-nvim.enable = true;
 
-      comments = {
-        comment-nvim = {
-          enable = true;
-          mappings = {
-            toggleCurrentLine = "<leader>tcc";
-            toggleCurrentBlock = "<leader>tbc";
-            toggleOpLeaderLine = "<leader>tc";
-            toggleOpLeaderBlock = "<leader>tb";
-            toggleSelectedLine = "<leader>tc";
-            toggleSelectedBlock = "<leader>tb";
-          };
-        };
+        highlight-undo.enable = true;
+        indent-blankline.enable = true;
       };
     };
   };
