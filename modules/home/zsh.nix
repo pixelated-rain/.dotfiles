@@ -12,7 +12,7 @@
     };
 
     initExtra = ''
-      bindkey -s '\el' 'ls\n'
+      bindkey -s '\el' 'l\n'
       bindkey -s '\e.' 'cd ..\n'
       bindkey -s '\ef' 'fastfetch\n'
       bindkey -s '\ec' 'clear\n'
