@@ -289,7 +289,26 @@ in {
         "__GL_VRR_ALLOWED,1"
         "WLR_NO_HARDWARE_CURSORS,1"
         "WLR_DRM_NO_ATOMIC,1"
+        "ELECTRON_OZONE_PLATFORM_HINT,auto"
       ];
+
+      # more Nvidia-specific settings.
+      # below settings are what stop electron screen flickering with the 2070S.
+      # note: these changes increase power consumption.
+      # TODO: get this out of here and specifically into the nvidia desktop config.
+      render = {
+        explicit_sync = 2;
+        explicit_sync_kms = 0;
+      };
+
+      opengl = {
+        nvidia_anti_flicker = 0;
+        force_introspection = 2;
+      };
+
+      misc.vfr = 0;
+
+      debug.damage_tracking = 0;
     };
 
     extraConfig = "
