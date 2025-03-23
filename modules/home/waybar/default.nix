@@ -32,9 +32,8 @@ in {
           "cava"
           "custom/separator#dot-line"
           "clock"
-          "custom/separator#dot-line"
+          "custom/separator#line"
           "hyprland/workspaces"
-          "custom/separator#dot-line"
           "idle_inhibitor"
           "custom/separator#blank"
         ];
@@ -66,9 +65,7 @@ in {
           disable-scroll = true;
           show-special = false;
 
-          # TODO:make the below data a host variable
-
-          # for machines with one monitor
+          # TODO: figure out how to force workspaces to certain monitors
           persistent-workspaces = {
             "*" = 5;
           };
@@ -157,6 +154,11 @@ in {
 
         "custom/separator#dot-line" = {
           format = "";
+          interval = "once";
+          tooltip = false;
+        };
+        "custom/separator#line" = {
+          format = "|";
           interval = "once";
           tooltip = false;
         };
