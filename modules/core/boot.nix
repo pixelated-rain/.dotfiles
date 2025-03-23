@@ -19,7 +19,8 @@
         efiSupport = true;
         useOSProber = true;
         gfxmodeEfi = "2560x1440";
-        theme = pkgs.catppuccin-grub;
+        # stylix manages grub theme
+        # theme = pkgs.catppuccin-grub;
       };
     };
 

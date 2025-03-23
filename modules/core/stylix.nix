@@ -1,8 +1,13 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  config,
+  ...
+}: {
   # Styling Options
   stylix = {
     enable = true;
     image = ../../wallpapers/hollow-knight.png;
+    # catppuccin-mocha base16Scheme
     base16Scheme = {
       base00 = "1e1e2e";
       base01 = "181825";
@@ -31,16 +36,16 @@
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.fira-code; #jetbrains-mono;
-        name = "Fira Code";
+        name = "FiraCode Nerd Font";
       };
+      emoji = config.stylix.fonts.monospace;
       sansSerif = {
         package = pkgs.montserrat;
         name = "Montserrat";
       };
-      serif = {
-        package = pkgs.montserrat;
-        name = "Montserrat";
-      };
+      # no serifs
+      serif = config.stylix.fonts.sansSerif;
+
       sizes = {
         applications = 12;
         terminal = 15;
@@ -49,7 +54,7 @@
       };
     };
     targets = {
-      grub.enable = false;
+      grub.enable = true;
     };
   };
 }
