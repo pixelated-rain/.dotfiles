@@ -63,7 +63,6 @@
     qbittorrent-enhanced
     ripgrep
     socat
-    texliveFull
     unrar
     unzip
     usbutils

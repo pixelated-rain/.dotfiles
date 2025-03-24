@@ -21,7 +21,7 @@
     "base16-fish": {
       "flake": false,
       "locked": {
-        "lastModified": 1622559957,
+        "lastModified": 1622559958,
         "narHash": "sha256-PebymhVYbL8trDVVXxCvZgc0S5VxI7I1Hv4RMSquTpA=",
         "owner": "tomyun",
         "repo": "base16-fish",
