@@ -9,6 +9,7 @@
     browser
     terminal
     extraMonitorSettings
+    defaultWallpaper
     keyboardLayout
     ;
 in {
@@ -23,7 +24,7 @@ in {
         "nm-applet --indicator"
         "lxqt-policykit-agent"
         "pypr &"
-        "sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/hollow-knight.png"
+        "sleep 1.5 && swww img /home/${username}/pictures/wallpapers/${defaultWallpaper}"
       ];
 
       input = {
@@ -116,7 +117,7 @@ in {
         "$modifier SHIFT,D,exec,vesktop --enable-features=WebRTCPipeWireCapturer"
         "$modifier,O,exec,obs"
         "$modifier,C,exec,hyprpicker -a"
-        "$modifier,G,exec,gimp"
+        "$modifier,G,exec,gamemode"
         "$modifier,T,exec,thunar"
         "$modifier SHIFT,T,exec,pypr toggle thunar"
         "$modifier,M,exec,pavucontrol"

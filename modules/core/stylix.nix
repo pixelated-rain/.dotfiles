@@ -6,7 +6,8 @@
   # Styling Options
   stylix = {
     enable = true;
-    image = ../../wallpapers/hollow-knight.png;
+    # not needed because wallpaper is managed by swww
+    # image = ../../wallpapers/hollow-knight.png;
     # catppuccin-mocha base16Scheme
     base16Scheme = {
       base00 = "1e1e2e";
