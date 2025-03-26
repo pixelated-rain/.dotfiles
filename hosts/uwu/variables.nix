@@ -5,7 +5,7 @@
 
   # Hyprland Settings
   extraMonitorSettings = "
-    monitor = eDP-1, 1920x1080@144, auto, auto;
+    monitor = ,1920x1080@144,auto,1
   ";
   defaultWallpaper = "cherry-5.jpg";
 
