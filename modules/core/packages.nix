@@ -26,6 +26,7 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run
+    bolt-launcher
     cmatrix
     cowsay
     docker-compose
@@ -62,6 +63,7 @@
     playerctl
     qbittorrent-enhanced
     ripgrep
+    runelite
     socat
     unrar
     unzip
