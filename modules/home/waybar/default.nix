@@ -43,6 +43,7 @@ in {
           "custom/separator#dot-line"
           "tray"
           "custom/separator#dot-line"
+          "battery"
           "custom/power"
           "custom/separator#blank"
         ];
