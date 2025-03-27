@@ -7,6 +7,7 @@
   extraMonitorSettings = "
     monitor = ,1920x1080@60,auto,1
   ";
+  extraHardwareSettings = "";
   defaultWallpaper = "hollow-knight.png";
 
   fontSizes = {
