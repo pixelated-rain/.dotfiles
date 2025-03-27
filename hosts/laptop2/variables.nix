@@ -5,9 +5,16 @@
 
   # Hyprland Settings
   extraMonitorSettings = "
-    monitor = ,1920x1080@60,auto,1.2
+    monitor = ,1920x1080@60,auto,1
   ";
   defaultWallpaper = "hollow-knight.png";
+
+  fontSizes = {
+    applications = 14;
+    terminal = 18;
+    desktop = 12;
+    popups = 12;
+  };
 
   # Waybar Settings
   clock24h = true;

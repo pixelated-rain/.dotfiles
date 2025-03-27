@@ -10,6 +10,13 @@
   ";
   defaultWallpaper = "hollow-knight.png";
 
+  fontSizes = {
+    applications = 12;
+    terminal = 15;
+    desktop = 11;
+    popups = 12;
+  };
+
   # Waybar Settings
   clock24h = true;
 
