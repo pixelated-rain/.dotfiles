@@ -5,7 +5,7 @@
 
   # Hyprland Settings
   extraMonitorSettings = "
-    monitor = eDP-1, 1920x1080@60, auto, auto;
+    monitor = ,1920x1080@60,auto,1.2
   ";
   defaultWallpaper = "hollow-knight.png";
 
