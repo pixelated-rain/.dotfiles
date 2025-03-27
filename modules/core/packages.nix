@@ -26,6 +26,7 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run
+    audacity
     bolt-launcher
     cmatrix
     cowsay
@@ -44,6 +45,7 @@
     inxi
     killall
     krabby
+    krita
     libnotify
     libvirt
     lm_sensors
@@ -71,6 +73,7 @@
     usbutils
     v4l-utils
     virt-viewer
+    vlc
     wget
     ytmdl
   ];
