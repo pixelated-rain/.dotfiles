@@ -48,6 +48,7 @@
     krita
     libnotify
     libvirt
+    linuxKernel.packages.linux_zen.openrazer
     lm_sensors
     lolcat
     lshw
@@ -58,6 +59,7 @@
     ncdu
     ninja
     nixfmt-rfc-style
+    obs-studio
     pavucontrol
     pciutils
     picard
