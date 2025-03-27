@@ -61,6 +61,7 @@
     picard
     pkg-config
     playerctl
+    prismlauncher
     qbittorrent-enhanced
     ripgrep
     runelite
