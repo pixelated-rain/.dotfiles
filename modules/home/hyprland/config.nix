@@ -53,7 +53,7 @@ in {
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base0E}) rgb(${config.lib.stylix.colors.base0D}) 45deg";
+        "col.active_border" = "rgb(${config.lib.stylix.colors.base06}) rgb(${config.lib.stylix.colors.base0D}) 45deg";
         "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
@@ -304,6 +304,8 @@ in {
       monitor=,preferred,auto,auto
       ${extraMonitorSettings}
       ${extraHardwareSettings}
+      layerrule = blur, waybar
+      layerrule = ignorezero, waybar
     ";
   };
 }

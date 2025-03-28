@@ -6,6 +6,7 @@
   home.packages = with pkgs; [
     inputs.zen-browser.packages."${system}".default
     ungoogled-chromium
+    firefox
     tor-browser
   ];
 }

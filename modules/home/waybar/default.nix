@@ -278,7 +278,7 @@ in {
         #workspaces button:hover {
           border-radius: 10px;
           color: @peach;
-          background-color: @surface0;
+          background-color: #${config.lib.stylix.colors.base06};
           padding-left: 2px;
           padding-right: 2px;
           animation: gradient_f 20s ease-in infinite;
@@ -292,7 +292,7 @@ in {
 
         #taskbar button.active,
         #workspaces button.active {
-        	color: @mauve;
+        	color: #${config.lib.stylix.colors.base06};
           border-radius: 10px;
           padding-left: 8px;
           padding-right: 8px;
@@ -307,16 +307,17 @@ in {
 
         .modules-center, .modules-right {
           background: @base;
-          border: 0.5px solid @overlay0;
+          border: 0.5px solid #${config.lib.stylix.colors.base06};
         	padding-top: 2px;
         	padding-bottom: 2px;
         	padding-right: 4px;
         	padding-left: 4px;
         	border-radius: 10px;
+          opacity: 0.8;
         }
 
         .modules-right {
-          border: 1px solid @mauve;
+          border: 1px solid #${config.lib.stylix.colors.base06};
         }
 
         #backlight,
@@ -397,7 +398,7 @@ in {
         }
 
         #battery {
-          color: @green;
+          color: @surface1;
         }
 
         @keyframes blink {
@@ -418,7 +419,7 @@ in {
         }
 
         #clock {
-          color: @yellow;
+          color: #${config.lib.stylix.colors.base06};
         }
 
         #cpu {
@@ -462,7 +463,7 @@ in {
         }
 
         #custom-power {
-          color: @red;
+          color: #${config.lib.stylix.colors.base06};
         }
 
         #custom-updater {
