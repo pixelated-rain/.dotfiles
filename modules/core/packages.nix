@@ -70,6 +70,7 @@
     ripgrep
     runelite
     socat
+    spotify
     unrar
     unzip
     usbutils
