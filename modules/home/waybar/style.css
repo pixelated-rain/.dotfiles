@@ -199,9 +199,6 @@ window#waybar.empty #window {
 }
 /*-----Indicators----*/
 #custom-hypridle.notactive,
-#idle_inhibitor.activated {
-	color: #39FF14;
-}
 
 #bluetooth,
 #backlight {
