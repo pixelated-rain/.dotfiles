@@ -59,6 +59,7 @@
     pavucontrol
     pciutils
     picard
+    pipes-rs
     pkg-config
     playerctl
     qbittorrent-enhanced
