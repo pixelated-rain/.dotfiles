@@ -5,14 +5,14 @@
     settings = {
       display = {
         color = {
-          keys = "35";
+          keys = "36";
           output = "95";
         };
         separator = "  "; # " ➜ ";
       };
 
       logo = {
-        source = ./nixos.png;
+        source = ./nixos1.png;
         type = "kitty-direct";
         height = 10;
         width = 20;
@@ -28,7 +28,7 @@
         {
           type = "custom";
           format = "┌──────────────────── OS ────────────────────┐";
-          outputColor = "35";
+          outputColor = "36";
         }
         {
           type = "os";
@@ -49,7 +49,7 @@
         {
           type = "custom";
           format = "├──────────────────── WM ────────────────────┤";
-          outputColor = "35";
+          outputColor = "36";
         }
         {
           type = "wm";
@@ -78,7 +78,7 @@
         {
           type = "custom";
           format = "├───────────────── Hardware ─────────────────┤";
-          outputColor = "35";
+          outputColor = "36";
         }
         {
           type = "cpu";
@@ -113,7 +113,7 @@
         {
           type = "custom";
           format = "└────────────────────────────────────────────┘";
-          outputColor = "35";
+          outputColor = "36";
         }
         {
           type = "colors";
