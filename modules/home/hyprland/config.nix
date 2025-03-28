@@ -9,6 +9,7 @@
     browser
     terminal
     extraMonitorSettings
+    extraHardwareSettings
     defaultWallpaper
     keyboardLayout
     ;
@@ -285,6 +286,7 @@ in {
         "MOZ_ENABLE_WAYLAND, 1"
 
         # Nvidia settings
+        # TODO: also move this to host variables.
         "LIBVA_DRIVER_NAME,nvidia"
         "__GLX_VENDOR_LIBRARY_NAME,Nvidia"
         "__GL_VRR_ALLOWED,1"
@@ -296,25 +298,12 @@ in {
       # more Nvidia-specific settings.
       # below settings are what stop electron screen flickering with the 2070S.
       # note: these changes increase power consumption.
-      # TODO: get this out of here and specifically into the nvidia desktop config.
-      render = {
-        explicit_sync = 2;
-        explicit_sync_kms = 0;
-      };
-
-      opengl = {
-        nvidia_anti_flicker = 0;
-        force_introspection = 2;
-      };
-
-      misc.vfr = 0;
-
-      debug.damage_tracking = 0;
     };
 
     extraConfig = "
       monitor=,preferred,auto,auto
       ${extraMonitorSettings}
+      ${extraHardwareSettings}
     ";
   };
 }

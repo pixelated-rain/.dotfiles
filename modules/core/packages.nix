@@ -28,6 +28,7 @@
     appimage-run
     audacity
     bolt-launcher
+    brightnessctl
     cmatrix
     cowsay
     docker-compose
