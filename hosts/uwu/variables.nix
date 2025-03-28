@@ -7,6 +7,14 @@
   extraMonitorSettings = "
     monitor = ,1920x1080@144,auto,1
   ";
+  extraHardwareSettings = "";
+
+  fontSizes = {
+    applications = 14;
+    terminal = 18;
+    desktop = 12;
+    popups = 12;
+  };
   defaultWallpaper = "cherry-5.jpg";
 
   # Waybar Settings
