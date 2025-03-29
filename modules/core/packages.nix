@@ -53,6 +53,7 @@
     lm_sensors
     lolcat
     lshw
+    lutris
     lxqt.lxqt-policykit
     meson
     mpv
