@@ -64,6 +64,7 @@
     pavucontrol
     pciutils
     picard
+    pipes-rs
     pkg-config
     playerctl
     prismlauncher
