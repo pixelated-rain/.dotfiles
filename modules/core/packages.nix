@@ -68,6 +68,7 @@
     pipes-rs
     pkg-config
     playerctl
+    polychromatic
     prismlauncher
     qbittorrent-enhanced
     ripgrep
