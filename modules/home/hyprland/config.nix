@@ -304,8 +304,6 @@ in {
       monitor=,preferred,auto,auto
       ${extraMonitorSettings}
       ${extraHardwareSettings}
-      layerrule = blur, waybar
-      layerrule = ignorezero, waybar
     ";
   };
 }
