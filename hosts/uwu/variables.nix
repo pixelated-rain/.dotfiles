@@ -7,7 +7,24 @@
   extraMonitorSettings = "
     monitor = ,1920x1080@144,auto,1
   ";
-  extraHardwareSettings = "";
+  extraHardwareSettings = "
+    render {
+      explicit_sync = 2
+      explicit_sync_kms = 0
+    }
+
+    opengl {
+      nvidia_anti_flicker = 0
+    }
+
+    misc {
+      vfr = 0
+    }
+
+    debug {
+      damage_tracking = 0
+    } 
+  ";
 
   fontSizes = {
     applications = 14;
