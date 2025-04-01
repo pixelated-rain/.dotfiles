@@ -5,7 +5,7 @@
 
   # Hyprland Settings
   extraMonitorSettings = "
-    monitor = ,1920x1080@144,auto,1
+    monitor = ,1920x1080@360,auto,1
   ";
   extraHardwareSettings = "
     render {
