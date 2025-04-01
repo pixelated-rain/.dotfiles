@@ -32,7 +32,7 @@
     desktop = 12;
     popups = 12;
   };
-  defaultWallpaper = "cherry-5.jpg";
+  defaultWallpaper = "star-trail.jpg";
 
   # Waybar Settings
   clock24h = false;
