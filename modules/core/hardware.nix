@@ -12,6 +12,7 @@
     keyboard.qmk.enable = true;
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
+    opentabletdriver.enable = true;
     openrazer = {
       enable = true;
       users = ["amelia"];

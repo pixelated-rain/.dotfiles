@@ -62,6 +62,7 @@
     ninja
     nixfmt-rfc-style
     obs-studio
+    opentabletdriver
     pavucontrol
     pciutils
     picard
