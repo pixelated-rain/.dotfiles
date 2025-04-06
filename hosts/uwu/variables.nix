@@ -5,7 +5,8 @@
 
   # Hyprland Settings
   extraMonitorSettings = "
-    monitor = ,1920x1080@360,auto,1
+    monitor = eDP-1,1920x1080@360.00Hz,1920x0,1.0
+    monitor = DP-3,3840x2160@60.00Hz,0x0,2.0
   ";
   extraHardwareSettings = "
     render {
