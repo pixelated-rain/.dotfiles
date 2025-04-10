@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+in {
   programs = {
     firefox.enable = false; # Firefox is not installed by default
     dconf.enable = true;
@@ -49,7 +50,7 @@
     krita
     libnotify
     libvirt
-    linuxKernel.packages.linux_zen.openrazer
+    # linuxKernel.packages.linux_zen.openrazer
     lm_sensors
     lolcat
     lshw
@@ -76,6 +77,7 @@
     runelite
     socat
     spotify
+    tradingview
     unrar
     unzip
     usbutils

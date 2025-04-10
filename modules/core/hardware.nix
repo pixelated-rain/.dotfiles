@@ -13,10 +13,10 @@
     bluetooth.enable = true;
     bluetooth.powerOnBoot = true;
     opentabletdriver.enable = true;
-    openrazer = {
-      enable = true;
-      users = ["amelia"];
-    };
+    # openrazer = {
+    #   enable = true;
+    #   users = ["amelia"];
+    # };
   };
   local.hardware-clock.enable = false;
 }
