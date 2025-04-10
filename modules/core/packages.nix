@@ -73,6 +73,7 @@ in {
     polychromatic
     prismlauncher
     qbittorrent-enhanced
+    retroarch-free
     ripgrep
     runelite
     socat

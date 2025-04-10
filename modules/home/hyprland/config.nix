@@ -62,6 +62,8 @@ in {
         initial_workspace_tracking = 0;
         mouse_move_enables_dpms = true;
         key_press_enables_dpms = false;
+        disable_splash_rendering = true;
+        disable_hyprland_logo = true;
       };
 
       dwindle = {
@@ -205,7 +207,7 @@ in {
         "tag +browser, class:^(Brave-browser(-beta|-dev|-unstable)?)$"
         "tag +browser, class:^([Ff]irefox|org.mozilla.firefox|[Ff]irefox-esr)$"
         "tag +browser, class:^([Gg]oogle-chrome(-beta|-dev|-unstable)?)$"
-        "tag +browser, class:^([Zz]en(-browser)?)$"
+        "tag +browser, class:^([Zz]en(-browser)?(-beta)?)$"
         "tag +browser, class:^([Tt]horium-browser|[Cc]achy-browser)$"
         "tag +projects, class:^(codium|codium-url-handler|VSCodium)$"
         "tag +projects, class:^(VSCode|code-url-handler)$"
