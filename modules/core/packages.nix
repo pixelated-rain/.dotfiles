@@ -26,6 +26,7 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run
+    azahar
     brightnessctl
     cmatrix
     cowsay
