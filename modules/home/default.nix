@@ -11,6 +11,7 @@ _: {
     ./discord.nix
     ./emoji.nix
     ./fastfetch
+    # ./foot.nix
     ./gh.nix
     ./ghostty.nix
     ./git.nix
