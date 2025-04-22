@@ -26,7 +26,6 @@
 
   environment.systemPackages = with pkgs; [
     appimage-run
-    azahar
     brightnessctl
     cmatrix
     cowsay
@@ -74,5 +73,6 @@
     virt-viewer
     wget
     ytmdl
+    zoom-us
   ];
 }
