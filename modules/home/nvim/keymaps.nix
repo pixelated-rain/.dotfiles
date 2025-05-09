@@ -53,6 +53,7 @@
         silent = true;
       }
 
+      # goto defn./decl.
       {
         key = "gd";
         mode = ["n"];
@@ -64,6 +65,14 @@
         mode = ["n"];
         action = "<cmd>lua vim.lsp.buf.declaration()<CR>";
         desc = "goto declaration";
+      }
+
+      # close a buffer
+      {
+        key = "<leader>bd";
+        mode = ["n"];
+        action = "<cmd>bp | bd#<CR>";
+        desc = "buffer delete";
       }
     ];
 
