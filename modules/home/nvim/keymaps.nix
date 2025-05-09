@@ -52,6 +52,19 @@
         desc = "Exit terminal mode";
         silent = true;
       }
+
+      {
+        key = "gd";
+        mode = ["n"];
+        action = "<cmd>lua vim.lsp.buf.definition()<CR>";
+        desc = "goto definition";
+      }
+      {
+        key = "gD";
+        mode = ["n"];
+        action = "<cmd>lua vim.lsp.buf.declaration()<CR>";
+        desc = "goto declaration";
+      }
     ];
 
     autocomplete.nvim-cmp.mappings = {
