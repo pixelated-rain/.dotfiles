@@ -63,6 +63,7 @@
     pkg-config
     playerctl
     qbittorrent-enhanced
+    quickemu
     retroarch-free
     ripgrep
     socat
@@ -73,6 +74,5 @@
     virt-viewer
     wget
     ytmdl
-    zoom-us
   ];
 }
