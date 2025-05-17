@@ -1,5 +1,6 @@
 _: {
   imports = [
+    ./haskell.nix
     ./latex.nix
     ./lean.nix
     ./markdown.nix
