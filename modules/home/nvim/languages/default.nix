@@ -1,5 +1,6 @@
 _: {
   imports = [
+    ./clang.nix
     ./latex.nix
     ./lean.nix
     ./markdown.nix
