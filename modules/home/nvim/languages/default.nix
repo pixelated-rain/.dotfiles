@@ -1,5 +1,7 @@
 _: {
   imports = [
+    ./asm.nix
+    ./clang.nix
     ./haskell.nix
     ./latex.nix
     ./lean.nix
