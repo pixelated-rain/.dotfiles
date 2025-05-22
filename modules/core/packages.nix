@@ -32,6 +32,7 @@ in {
     brightnessctl
     cmatrix
     cowsay
+    discord
     docker-compose
     duf
     eza
@@ -40,6 +41,7 @@ in {
     fzf
     gedit
     gimp
+    gpt4all
     greetd.tuigreet
     htop
     hyprpicker
@@ -78,7 +80,6 @@ in {
     runelite
     socat
     spotify
-    tradingview
     unrar
     unzip
     usbutils
