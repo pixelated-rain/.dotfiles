@@ -9,5 +9,10 @@ in {
       "*/.direnv"
       "*/.envrc"
     ];
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+    };
   };
 }

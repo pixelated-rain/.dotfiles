@@ -30,12 +30,14 @@ in {
     description = "${gitUsername}";
     extraGroups = [
       "adbusers"
+      "dialout"
       "docker"
       "libvirtd"
       "lp"
       "networkmanager"
       "scanner"
       "wheel"
+      "dialout"
     ];
     shell = pkgs.zsh;
     ignoreShellProgramCheck = true;

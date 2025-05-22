@@ -1,4 +1,4 @@
-{...}: {
+_: {
   imports = [
     ./bash.nix
     ./bat.nix
@@ -11,6 +11,7 @@
     ./discord.nix
     ./emoji.nix
     ./fastfetch
+    # ./foot.nix
     ./gh.nix
     ./ghostty.nix
     ./git.nix
@@ -21,6 +22,7 @@
     ./nano.nix
     ./nvim
     ./obsidian.nix
+    ./revolting
     ./rofi
     ./qt.nix
     ./scripts

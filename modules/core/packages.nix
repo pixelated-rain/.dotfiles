@@ -75,6 +75,7 @@ in {
     polychromatic
     prismlauncher
     qbittorrent-enhanced
+    quickemu
     retroarch-free
     ripgrep
     runelite

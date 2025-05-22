@@ -11,7 +11,7 @@
       TERMINAL = "kitty";
     };
 
-    initExtra = ''
+    initContent = ''
       bindkey -s '\eg' 'g\n'
       bindkey -s '\el' 'l\n'
       bindkey -s '\e.' 'cd ..\n'
@@ -24,7 +24,7 @@
       krabby name shinx --no-title
       eval "$(direnv hook zsh)"
       function dev () {
-        nix flake init --template "https://flakehub.com/f/the-nix-way/dev-templates/*#$@"
+        nix flake init --template "github:CharredLee/dev-templates#$@"
         direnv allow
       }
     '';
@@ -49,10 +49,6 @@
 
       sdn = "shutdown now";
       rb = "reboot";
-
-      # python
-      piv = "python -m venv .venv";
-      psv = "source .venv/bin/activate";
 
       # git
       g = "lazygit";

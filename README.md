@@ -13,20 +13,22 @@ overhauled, including:
 - a wholly different [stylix](https://github.com/danth/stylix) theme, using
   [catppuccin](https://catppuccin.com/),
 - a totally different [waybar](https://github.com/Alexays/Waybar),
-- a highly personalized [nvf](https://github.com/NotAShelf/nvf) configuration,
+- a highly customized [nvf](https://github.com/NotAShelf/nvf) configuration,
+- development environments powered by
+  [CharredLee/dev-templates](https://github.com/CharredLee/dev-templates),
 
 and more. also, some code (especially that of the waybar) is directly
 taken/converted into nix from
-[JaKooLit's dotfiles](https://github.com/JaKooLit/Hyprland-Dots), specifically,
-the waybar, which is a modified version of JaKooLit's catppuccin-mocha themed
-waybar. attributions are in comments in every file where code was copied, so one
-may search this repo for "JaKooLit" to find that code.
+[JaKooLit's dotfiles](https://github.com/JaKooLit/Hyprland-Dots), which is a
+modified version of JaKooLit's catppuccin-mocha themed waybar. attributions are
+in comments in every file where code was copied, so one may search this repo for
+"JaKooLit" to find that code.
 
 ## how to use
 
 this repo should be cloned into `~/.dotfiles`.
 
-## building this flake
+### building this flake
 
 1. ensure NixOS is installed.
 2. ensure that the optional settings `nix-config` and `flake` are enabled.
@@ -62,7 +64,7 @@ fu
 
 instead.
 
-## creating an iso image
+### creating an iso image
 
 to build an iso image out of this flake, run
 
