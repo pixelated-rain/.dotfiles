@@ -50,6 +50,8 @@
     lolcat
     lshw
     lxqt.lxqt-policykit
+    mask
+    masklint
     meson
     mpv
     mullvad-vpn
