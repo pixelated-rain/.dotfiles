@@ -21,7 +21,8 @@
   clock24h = true;
 
   # variables which toggle packages
-  gaming = true;
+  gaming = false;
+  texlive = false;
 
   # Program Options
   browser = "zen"; # Set Default Browser (google-chrome-stable for google-chrome)
