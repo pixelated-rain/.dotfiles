@@ -29,6 +29,7 @@ _: {
     ./stylix.nix
     ./swaync.nix
     ./tex.nix
+    ./variables.nix
     ./virtmanager.nix
     ./waybar
     ./wlogout

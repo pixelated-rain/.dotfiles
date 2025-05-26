@@ -16,6 +16,7 @@
     ./syncthing.nix
     ./system.nix
     ./user.nix
+    ./variables.nix
     ./virtualisation.nix
     ./vpn.nix
     ./xdg.nix

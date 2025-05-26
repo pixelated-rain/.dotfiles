@@ -1,10 +1,9 @@
 {
   pkgs,
   config,
-  host,
   ...
 }: let
-  inherit (import ../../hosts/${host}/variables.nix) fontSizes;
+  inherit (config.variables) fontSizes;
 in {
   # Styling Options
   stylix = {
@@ -39,7 +38,7 @@ in {
     };
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.fira-code; #jetbrains-mono;
+        package = pkgs.nerd-fonts.fira-code;
         name = "FiraCode Nerd Font";
       };
       emoji = config.stylix.fonts.monospace;
