@@ -18,15 +18,15 @@
       url = "github:yazi-rs/plugins";
       flake = false;
     };
-    # # lix-module = {
-    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-1.tar.gz";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
     nixpkgs,
-    # lix-module,
+    lix-module,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -45,7 +45,7 @@
         };
         modules = [
           ./profiles/amd
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
       nvidia = nixpkgs.lib.nixosSystem {
@@ -58,7 +58,7 @@
         };
         modules = [
           ./profiles/nvidia
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
       nvidia-laptop = nixpkgs.lib.nixosSystem {
@@ -71,7 +71,7 @@
         };
         modules = [
           ./profiles/nvidia-laptop
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
       intel = nixpkgs.lib.nixosSystem {
@@ -84,7 +84,7 @@
         };
         modules = [
           ./profiles/intel
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
       vm = nixpkgs.lib.nixosSystem {
@@ -97,7 +97,7 @@
         };
         modules = [
           ./profiles/vm
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
       iso = nixpkgs.lib.nixosSystem {
@@ -110,7 +110,7 @@
         };
         modules = [
           ./profiles/iso
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
     };
