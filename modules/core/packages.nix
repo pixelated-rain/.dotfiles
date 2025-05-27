@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs = {
     dconf.enable = true;
     seahorse.enable = true;
@@ -23,58 +27,50 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-    appimage-run
-    brightnessctl
-    cmatrix
-    cowsay
-    docker-compose
-    duf
-    eza
-    ffmpeg
-    file-roller
-    fzf
-    gedit
-    gimp
-    greetd.tuigreet
-    htop
-    hyprpicker
-    imv
-    inxi
-    killall
-    krabby
-    libnotify
-    libvirt
-    lm_sensors
-    lolcat
-    lshw
-    lxqt.lxqt-policykit
-    mask
-    masklint
-    meson
-    mpv
-    mullvad-vpn
-    ncdu
-    ninja
-    nixfmt-rfc-style
-    obs-studio
-    pavucontrol
-    pciutils
-    picard
-    pipes-rs
-    pkg-config
-    playerctl
-    qbittorrent-enhanced
-    quickemu
-    retroarch-free
-    ripgrep
-    socat
-    unrar
-    unzip
-    usbutils
-    v4l-utils
-    virt-viewer
-    wget
-    ytmdl
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      brightnessctl
+      eza
+      ffmpeg
+      file-roller
+      fzf
+      gimp
+      greetd.tuigreet
+      hyprpicker
+      imv
+      killall
+      krabby
+      libnotify
+      libvirt
+      lm_sensors
+      lxqt.lxqt-policykit
+      mask
+      masklint
+      mpv
+      mullvad-vpn
+      ncdu
+      obs-studio
+      pavucontrol
+      pciutils
+      picard
+      playerctl
+      qbittorrent-enhanced
+      quickemu
+      ripgrep
+      socat
+      unrar
+      unzip
+      usbutils
+      v4l-utils
+      wget
+    ]
+    ++ lib.optional config.variables.gaming [
+      retroarch-free
+    ]
+    ++ lib.optional config.variables.silly [
+      cmatrix
+      cowsay
+      fortune-kind
+      pipes-rs
+    ];
 }
