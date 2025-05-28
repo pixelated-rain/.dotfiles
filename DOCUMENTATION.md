@@ -20,6 +20,13 @@ important options. this includes, but is not limited to:
 3. the default wallpaper,
 4. font sizes,
 5. the default editor and browser,
+6. whether or not to install certain software. currently, the following
+   variables are available for configuration:
+   - `gaming`: toggles the inclusion of software like retroarch and steam
+   - `texlive`: toggles whether to provide texlive-full. this in particular is
+     provided because texlive is large, and its presence significantly impacts
+     build times.
+   - `silly`: toggles nonsense CLI software like cowsay and cmatrix
 
 and more. `hosts/${hostname}/hardware.nix` is a direct copy of the file
 `/etc/nixos/hardware-configuration.nix` generated when the user runs the
@@ -38,9 +45,3 @@ will be kept for the time being.
 the folder for managing `nixpkgs` and `home-manager` dependencies. graphics
 drivers are also in here. currently, both `modules/core` and `modules/home` have
 a `default.nix` file which just imports all of the packages of interest.
-
-a major current goal is to introduce new per-host variables to group whether or
-not some packages should be installed on a given device. for example, it seems
-unlikely that steam should be installed on a device with no dedicated graphics.
-similarly, there should be a variable for whether TeXLive should be installed on
-a given device, since it is huge and significantly slows down build times.
