@@ -64,10 +64,19 @@
       v4l-utils
       wget
     ]
-    ++ lib.optional config.variables.gaming [
-      retroarch-free
+    ++ lib.optionals config.variables.gaming [
+      # TODO: move retroarch to ../home, add config
+      azahar # 3ds emu
+      cemu # wii u emu
+      melonDS #nds emu
+      dolphin-emu # wii/gcn emu
+      joycond # user daemon for joycon devices
+      joycond-cemuhook
+      prismlauncher # minecraft launcher
+      retroarch-free # generic emu
+      scarab # HK mod installer/manager
     ]
-    ++ lib.optional config.variables.silly [
+    ++ lib.optionals config.variables.silly [
       cmatrix
       cowsay
       fortune-kind
