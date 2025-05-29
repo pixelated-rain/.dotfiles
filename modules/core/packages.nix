@@ -63,6 +63,7 @@
       usbutils
       v4l-utils
       wget
+      zoxide
     ]
     ++ lib.optionals config.variables.gaming [
       # TODO: move retroarch to ../home, add config
