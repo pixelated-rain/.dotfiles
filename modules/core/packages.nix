@@ -69,13 +69,13 @@
       # TODO: move retroarch to ../home, add config
       azahar # 3ds emu
       cemu # wii u emu
-      melonDS #nds emu
       dolphin-emu # wii/gcn emu
-      joycond # user daemon for joycon devices
+      joycond
       joycond-cemuhook
+      lumafly # HK mod manager
+      melonDS #nds emu
       prismlauncher # minecraft launcher
       retroarch-free # generic emu
-      scarab # HK mod installer/manager
     ]
     ++ lib.optionals config.variables.silly [
       cmatrix
