@@ -31,6 +31,7 @@
     [
       brightnessctl
       dust
+      element-desktop
       eza
       ffmpeg
       file-roller
