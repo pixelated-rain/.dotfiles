@@ -30,6 +30,7 @@
   environment.systemPackages = with pkgs;
     [
       brightnessctl
+      dust
       eza
       ffmpeg
       file-roller
@@ -48,7 +49,6 @@
       masklint
       mpv
       mullvad-vpn
-      ncdu
       obs-studio
       pavucontrol
       pciutils

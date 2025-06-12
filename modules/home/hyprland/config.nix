@@ -5,6 +5,8 @@
 }: let
   inherit
     (config.variables)
+    accent0
+    accent1
     browser
     terminal
     extraMonitorSettings
@@ -24,7 +26,7 @@ in {
         "nm-applet --indicator"
         "lxqt-policykit-agent"
         "pypr &"
-        "sleep 1.5 && swww img /home/${username}/pictures/wallpapers/${defaultWallpaper}"
+        "sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/${defaultWallpaper}"
       ];
 
       input = {
@@ -52,7 +54,7 @@ in {
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base0E}) rgb(${config.lib.stylix.colors.base0D}) 45deg";
+        "col.active_border" = "rgb(${accent1}) rgb(${accent0}) 45deg";
         "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
