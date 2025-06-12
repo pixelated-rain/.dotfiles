@@ -24,6 +24,7 @@ _: {
     ./obsidian.nix
     ./rofi
     ./qt.nix
+    ./quickshell
     ./scripts
     ./starship.nix
     ./stylix.nix
