@@ -113,7 +113,7 @@ in {
         "$modifier SHIFT,Return,exec,pypr toggle term"
         "$modifier,D,exec,rofi-launcher"
         "$modifier SHIFT,W,exec,web-search"
-        "$modifier ALT,W,exec,wallsetter"
+        "$modifier ALT,W,exec,wallsetter-visual"
         "$modifier SHIFT,N,exec,swaync-client -rs"
         "$modifier,W,exec,${browser}"
         "$modifier,E,exec,emopicker9000"
