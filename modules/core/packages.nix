@@ -29,6 +29,11 @@
 
   environment.systemPackages = with pkgs;
     [
+      # kingler has some serious bugs
+      # e.g. because names are changed, pokemon with different forms are just... not printable to the terminal
+      # so `kingler name shaymin` doesn't work, and neither does `kingler name shaymin`
+      # customPkgs.kingler
+
       brightnessctl
       clock-rs
       dust

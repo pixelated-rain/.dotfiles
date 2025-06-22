@@ -34,6 +34,12 @@
     host = "desktop";
     profile = "nvidia";
     username = "charlie";
+
+    overlays = [
+      (final: prev: {
+        customPkgs = import ./modules/packages {pkgs = prev;};
+      })
+    ];
   in {
     nixosConfigurations = {
       amd = nixpkgs.lib.nixosSystem {
@@ -47,6 +53,7 @@
         modules = [
           ./profiles/amd
           lix-module.nixosModules.default
+          {nixpkgs.overlays = overlays;}
         ];
       };
       nvidia = nixpkgs.lib.nixosSystem {
@@ -60,6 +67,7 @@
         modules = [
           ./profiles/nvidia
           lix-module.nixosModules.default
+          {nixpkgs.overlays = overlays;}
         ];
       };
       nvidia-laptop = nixpkgs.lib.nixosSystem {
@@ -73,6 +81,7 @@
         modules = [
           ./profiles/nvidia-laptop
           lix-module.nixosModules.default
+          {nixpkgs.overlays = overlays;}
         ];
       };
       intel = nixpkgs.lib.nixosSystem {
@@ -99,6 +108,7 @@
         modules = [
           ./profiles/vm
           lix-module.nixosModules.default
+          {nixpkgs.overlays = overlays;}
         ];
       };
       iso = nixpkgs.lib.nixosSystem {
@@ -112,6 +122,7 @@
         modules = [
           ./profiles/iso
           lix-module.nixosModules.default
+          {nixpkgs.overlays = overlays;}
         ];
       };
     };
