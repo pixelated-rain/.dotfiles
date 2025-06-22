@@ -30,6 +30,7 @@
   environment.systemPackages = with pkgs;
     [
       brightnessctl
+      clock-rs
       dust
       element-desktop
       eza
