@@ -56,6 +56,7 @@
       masklint
       mpv
       mullvad-vpn
+      nicotine-plus
       obs-studio
       pavucontrol
       pciutils
