@@ -77,6 +77,7 @@
       azahar # 3ds emu
       cemu # wii u emu
       dolphin-emu # wii/gcn emu
+      edopro # YGO simulator
       joycond
       joycond-cemuhook
       lumafly # HK mod manager
