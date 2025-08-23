@@ -28,6 +28,7 @@ in {
   environment.systemPackages = with pkgs; [
     appimage-run
     audacity
+    blender
     bolt-launcher
     brightnessctl
     cmatrix
@@ -51,6 +52,7 @@ in {
     krabby
     krita
     libnotify
+    libreoffice
     libvirt
     # linuxKernel.packages.linux_zen.openrazer
     lm_sensors
