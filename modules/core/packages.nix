@@ -34,9 +34,11 @@
       # so `kingler name shaymin` doesn't work, and neither does `kingler name shaymin`
       # customPkgs.kingler
 
+      ardour
       brightnessctl
       clock-rs
       dust
+      electrum-ltc
       element-desktop
       eza
       ffmpeg
@@ -49,6 +51,7 @@
       killall
       krabby
       libnotify
+      libsForQt5.elisa
       libvirt
       lm_sensors
       lxqt.lxqt-policykit
@@ -85,6 +88,10 @@
       melonDS #nds emu
       prismlauncher # minecraft launcher
       retroarch-free # generic emu
+    ]
+    ++ lib.optionals config.variables.gamedev [
+      aseprite
+      godot
     ]
     ++ lib.optionals config.variables.silly [
       cmatrix
