@@ -45,13 +45,12 @@
       file-roller
       fzf
       gimp
-      greetd.tuigreet
+      tuigreet
       hyprpicker
       imv
       killall
       krabby
       libnotify
-      libsForQt5.elisa
       libvirt
       lm_sensors
       lxqt.lxqt-policykit
