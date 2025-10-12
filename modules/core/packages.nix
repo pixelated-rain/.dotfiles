@@ -69,6 +69,7 @@
       pciutils
       picard
       playerctl
+      prusa-slicer
       qbittorrent-enhanced
       quickemu
       ripgrep
