@@ -34,6 +34,12 @@
       # so `kingler name shaymin` doesn't work, and neither does `kingler name shaymin`
       # customPkgs.kingler
 
+      (agda.withPackages [
+        agdaPackages._1lab
+        agdaPackages.agda-categories
+        agdaPackages.cubical
+        agdaPackages.standard-library
+      ])
       ardour
       brightnessctl
       clock-rs
