@@ -38,7 +38,6 @@
       brightnessctl
       clock-rs
       dust
-      electrum-ltc
       element-desktop
       eza
       ffmpeg
@@ -77,7 +76,6 @@
     ]
     ++ lib.optionals config.variables.gaming [
       # TODO: move retroarch to ../home, add config
-      azahar # 3ds emu
       cemu # wii u emu
       dolphin-emu # wii/gcn emu
       edopro # YGO simulator
