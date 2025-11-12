@@ -23,8 +23,8 @@
 
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
-    host = "desktop";
-    profile = "nvidia";
+    host = "laptop2";
+    profile = "amd";
     username = "charlie";
 
     overlays = [
