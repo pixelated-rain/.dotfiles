@@ -134,6 +134,21 @@ in {
         "$modifier CTRL,B,exec,pkill -SIGUSR1 waybar || waybar"
         "$modifier CONTROL,F,togglefloating,"
         "$modifier CONTROL,C,exit,"
+
+        # vim motions style window movement
+        "$modifier CONTROL,H,movewindow,l"
+        "$modifier CONTROL,L,movewindow,r"
+        "$modifier CONTROL,K,movewindow,u"
+        "$modifier CONTROL,J,movewindow,d"
+        "$modifier SHIFT,H,resizeactive, -30 0"
+        "$modifier SHIFT,L,resizeactive, 30 0"
+        "$modifier SHIFT,K,resizeactive, 0 -30"
+        "$modifier SHIFT,J,resizeactive, 0 30"
+        "$modifier,H,movefocus,l"
+        "$modifier,L,movefocus,r"
+        "$modifier,K,movefocus,u"
+        "$modifier,J,movefocus,d"
+        # arrow key counterparts
         "$modifier CONTROL,left,movewindow,l"
         "$modifier CONTROL,right,movewindow,r"
         "$modifier CONTROL,up,movewindow,u"
@@ -146,6 +161,7 @@ in {
         "$modifier,right,movefocus,r"
         "$modifier,up,movefocus,u"
         "$modifier,down,movefocus,d"
+
         "$modifier,code:10,workspace,1"
         "$modifier,code:11,workspace,2"
         "$modifier,code:12,workspace,3"
