@@ -40,7 +40,8 @@
         agdaPackages.cubical
         agdaPackages.standard-library
       ])
-      ardour
+      # fails to build 2025-11-15
+      # ardour
       brightnessctl
       clock-rs
       dust
@@ -59,6 +60,7 @@
       libnotify
       libvirt
       lm_sensors
+      lmms
       lxqt.lxqt-policykit
       mask
       masklint
