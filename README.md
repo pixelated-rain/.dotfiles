@@ -14,7 +14,7 @@ been completely overhauled, including:
 - a totally different [waybar](https://github.com/Alexays/Waybar),
 - a highly customized [nvf](https://github.com/NotAShelf/nvf) configuration,
 - development environments powered by
-  [CharredLee/dev-templates](https://github.com/CharredLee/dev-templates),
+  [658060/dev-templates](https://github.com/658060/dev-templates),
 
 and more. also, some code (especially that of the waybar) is directly
 taken/converted into nix from
