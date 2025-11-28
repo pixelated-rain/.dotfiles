@@ -24,9 +24,9 @@
   outputs = {nixpkgs, ...} @ inputs: let
     system = "x86_64-linux";
     # leaving these empty in the repo to keep conflicts between machines away.
-    host = "";
-    profile = "";
-    username = "";
+    host = "laptop2";
+    profile = "amd";
+    username = "charlie";
 
     overlays = [
       (final: prev: {
