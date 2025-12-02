@@ -44,6 +44,7 @@
       # fails to build 2025-11-15
       # ardour
       brightnessctl
+      claude-code # unfortunately needed for work
       clock-rs
       dust
       # marked unsafe
@@ -52,6 +53,7 @@
       ffmpeg
       file-roller
       fzf
+      gemini-cli
       gimp
       tuigreet
       hyprpicker
