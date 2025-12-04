@@ -90,6 +90,7 @@
       vlc
       wget
       ytmdl
+      zoxide
     ]
     ++ lib.optionals config.variables.gaming [
       # TODO: move retroarch to ../home, add config
