@@ -1,9 +1,9 @@
 {
   pkgs,
-  host,
+  config,
   ...
 }: let
-  inherit (import ../../../hosts/${host}/variables.nix) defaultWallpaper;
+  inherit (config.variables) defaultWallpaper;
 in
   # this script is sourced from JaKooLit's dotfiles:
   # https://github.com/JaKooLit/Hyprland-Dots/blob/main/config/hypr/scripts/GameMode.sh
@@ -25,7 +25,7 @@ in
         notify-send "Gamemode: enabled"
         exit
     else
-      swww-daemon --format xrgb && swww img "$HOME/pictures/wallpapers/${defaultWallpaper}" &
+      swww-daemon --format xrgb && swww img "$HOME/Pictures/Wallpapers/${defaultWallpaper}" &
       sleep 0.5
       hyprctl --batch "\
           keyword animations:enabled 1;\

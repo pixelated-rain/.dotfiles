@@ -9,11 +9,6 @@
     monitor = eDP-1,1920x1080@60.00Hz,1920x0,1.0
   ";
   extraHardwareSettings = "
-    render {
-      explicit_sync = 2
-      explicit_sync_kms = 0
-    }
-
     opengl {
       nvidia_anti_flicker = 0
     }
@@ -26,6 +21,8 @@
       damage_tracking = 0
     } 
   ";
+
+  theme = "catppuccin-mocha";
 
   fontSizes = {
     applications = 14;
@@ -41,8 +38,14 @@
   # Program Options
   browser = "firefox"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "kitty"; # Set Default System Terminal
-  keyboardLayout = "us";
+  keyboardLayout = "";
   consoleKeyMap = "us";
+
+  # variables which toggle packages
+  gamedev = true;
+  gaming = true;
+  texlive = true;
+  silly = true;
 
   editor = "nvim";
   EDITOR = "nvim";

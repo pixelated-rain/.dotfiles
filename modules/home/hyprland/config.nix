@@ -1,11 +1,12 @@
 {
-  host,
   username,
   config,
   ...
 }: let
   inherit
-    (import ../../../hosts/${host}/variables.nix)
+    (config.variables)
+    accent0
+    accent1
     browser
     terminal
     extraMonitorSettings
@@ -19,17 +20,18 @@ in {
       exec-once = [
         "dbus-update-activation-environment --all --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-        "killall -q swww;sleep .5 && swww init"
+        "killall -q swww-daemon;sleep .5 && swww-daemon"
         "killall -q waybar;sleep .5 && waybar"
         "killall -q swaync;sleep .5 && swaync"
         "nm-applet --indicator"
         "lxqt-policykit-agent"
         "pypr &"
-        "sleep 1.5 && swww img /home/${username}/pictures/wallpapers/${defaultWallpaper}"
+        "sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/${defaultWallpaper}"
       ];
 
       input = {
-        kb_layout = "${keyboardLayout}";
+        kb_layout = "us";
+        kb_variant = "${keyboardLayout}";
         kb_options = [
           "grp:alt_caps_toggle"
           "caps:super"
@@ -53,7 +55,7 @@ in {
         gaps_out = 8;
         border_size = 2;
         resize_on_border = true;
-        "col.active_border" = "rgb(${config.lib.stylix.colors.base0E}) rgb(${config.lib.stylix.colors.base0D}) 45deg";
+        "col.active_border" = "rgb(${accent1}) rgb(${accent0}) 45deg";
         "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
       };
 
@@ -112,7 +114,7 @@ in {
         "$modifier SHIFT,Return,exec,pypr toggle term"
         "$modifier,D,exec,rofi-launcher"
         "$modifier SHIFT,W,exec,web-search"
-        "$modifier ALT,W,exec,wallsetter"
+        "$modifier ALT,W,exec,wallsetter-visual"
         "$modifier SHIFT,N,exec,swaync-client -rs"
         "$modifier,W,exec,${browser}"
         "$modifier,E,exec,emopicker9000"
@@ -132,6 +134,21 @@ in {
         "$modifier CTRL,B,exec,pkill -SIGUSR1 waybar || waybar"
         "$modifier CONTROL,F,togglefloating,"
         "$modifier CONTROL,C,exit,"
+
+        # vim motions style window movement
+        "$modifier CONTROL,H,movewindow,l"
+        "$modifier CONTROL,L,movewindow,r"
+        "$modifier CONTROL,K,movewindow,u"
+        "$modifier CONTROL,J,movewindow,d"
+        "$modifier SHIFT,H,resizeactive, -30 0"
+        "$modifier SHIFT,L,resizeactive, 30 0"
+        "$modifier SHIFT,K,resizeactive, 0 -30"
+        "$modifier SHIFT,J,resizeactive, 0 30"
+        "$modifier,H,movefocus,l"
+        "$modifier,L,movefocus,r"
+        "$modifier,K,movefocus,u"
+        "$modifier,J,movefocus,d"
+        # arrow key counterparts
         "$modifier CONTROL,left,movewindow,l"
         "$modifier CONTROL,right,movewindow,r"
         "$modifier CONTROL,up,movewindow,u"
@@ -144,6 +161,7 @@ in {
         "$modifier,right,movefocus,r"
         "$modifier,up,movefocus,u"
         "$modifier,down,movefocus,d"
+
         "$modifier,code:10,workspace,1"
         "$modifier,code:11,workspace,2"
         "$modifier,code:12,workspace,3"

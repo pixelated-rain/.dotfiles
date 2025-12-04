@@ -9,6 +9,7 @@ _: {
     ./codium.nix
     ./direnv.nix
     ./discord.nix
+    ./emacs.nix
     ./emoji.nix
     ./fastfetch
     # ./foot.nix
@@ -22,14 +23,16 @@ _: {
     ./nano.nix
     ./nvim
     ./obsidian.nix
-    ./revolting
     ./rofi
     ./qt.nix
+    ./quickshell
     ./scripts
     ./starship.nix
     ./stylix.nix
     ./swaync.nix
     ./tex.nix
+    ./tmux.nix
+    ./variables.nix
     ./virtmanager.nix
     ./waybar
     ./wlogout

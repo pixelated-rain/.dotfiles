@@ -1,17 +1,19 @@
-{host, ...}: let
-  inherit (import ../../hosts/${host}/variables.nix) gitUsername gitEmail;
+{config, ...}: let
+  inherit (config.variables) gitUsername gitEmail;
 in {
   programs.git = {
     enable = true;
-    userName = "${gitUsername}";
-    userEmail = "${gitEmail}";
     ignores = [
       "*/.direnv"
       "*/.envrc"
     ];
-    extraConfig = {
+    settings = {
       init = {
         defaultBranch = "main";
+      };
+      user = {
+        name = "${gitUsername}";
+        email = "${gitEmail}";
       };
     };
   };

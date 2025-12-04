@@ -1,7 +1,9 @@
-{pkgs, ...}: let
-in {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs = {
-    firefox.enable = false; # Firefox is not installed by default
     dconf.enable = true;
     seahorse.enable = true;
     fuse.userAllowOther = true;
@@ -25,71 +27,88 @@ in {
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.systemPackages = with pkgs; [
-    appimage-run
-    audacity
-    blender
-    bolt-launcher
-    brightnessctl
-    cmatrix
-    cowsay
-    discord
-    docker-compose
-    duf
-    eza
-    ffmpeg
-    file-roller
-    fzf
-    gedit
-    gimp
-    gpt4all
-    greetd.tuigreet
-    htop
-    hyprpicker
-    imv
-    inxi
-    killall
-    krabby
-    krita
-    libnotify
-    libreoffice
-    libvirt
-    # linuxKernel.packages.linux_zen.openrazer
-    lm_sensors
-    lolcat
-    lshw
-    lutris
-    lxqt.lxqt-policykit
-    meson
-    mpv
-    mullvad-vpn
-    ncdu
-    ninja
-    nixfmt-rfc-style
-    obs-studio
-    opentabletdriver
-    pavucontrol
-    pciutils
-    picard
-    pipes-rs
-    pkg-config
-    playerctl
-    polychromatic
-    prismlauncher
-    qbittorrent-enhanced
-    quickemu
-    retroarch-free
-    ripgrep
-    runelite
-    socat
-    spotify
-    unrar
-    unzip
-    usbutils
-    v4l-utils
-    virt-viewer
-    vlc
-    wget
-    ytmdl
-  ];
+  environment.systemPackages = with pkgs;
+    [
+      appimage-run
+      audacity
+      blender
+      bolt-launcher
+      brightnessctl
+      discord
+      docker-compose
+      duf
+      eza
+      ffmpeg
+      file-roller
+      fzf
+      gedit
+      gimp
+      # failed to build 2025-12-03
+      # gpt4all
+      greetd.tuigreet
+      htop
+      hyprpicker
+      imv
+      inxi
+      killall
+      krabby
+      krita
+      libnotify
+      libreoffice
+      libvirt
+      # linuxKernel.packages.linux_zen.openrazer
+      lm_sensors
+      lolcat
+      lshw
+      lutris
+      lxqt.lxqt-policykit
+      meson
+      mpv
+      mullvad-vpn
+      ncdu
+      ninja
+      nixfmt-rfc-style
+      obs-studio
+      opentabletdriver
+      pavucontrol
+      pciutils
+      picard
+      pkg-config
+      playerctl
+      polychromatic
+      qbittorrent-enhanced
+      quickemu
+      ripgrep
+      runelite
+      socat
+      spotify
+      unrar
+      unzip
+      usbutils
+      v4l-utils
+      virt-viewer
+      vlc
+      wget
+      ytmdl
+    ]
+    ++ lib.optionals config.variables.gaming [
+      # TODO: move retroarch to ../home, add config
+      cemu # wii u emu
+      dolphin-emu # wii/gcn emu
+      joycond
+      joycond-cemuhook
+      melonDS #nds emu
+      prismlauncher # minecraft launcher
+      retroarch-free # generic emu
+    ]
+    ++ lib.optionals config.variables.gamedev [
+      aseprite
+      godot
+    ]
+    ++ lib.optionals config.variables.silly [
+      cmatrix
+      cowsay
+      fortune-kind
+      pipes-rs
+    ];
 }

@@ -4,11 +4,19 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "sudo"
+      ];
+    };
+
     sessionVariables = {
       EDITOR = "nvim";
       VISUAL = "nvim";
       BROWSER = "firefox";
       TERMINAL = "kitty";
+      ZSH_THEME = "";
     };
 
     initContent = ''
@@ -24,9 +32,10 @@
       krabby name shinx --no-title
       eval "$(direnv hook zsh)"
       function dev () {
-        nix flake init --template "github:CharredLee/dev-templates#$@"
+        nix flake init --template "github:658060/dev-templates#$@"
         direnv allow
       }
+      eval "$(zoxide init zsh)"
     '';
 
     shellAliases = {

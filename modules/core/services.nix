@@ -1,12 +1,17 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   # Services to start
   services = {
-    libinput.enable = true;
+    blueman.enable = true;
+    flatpak.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
+    joycond.enable = config.variables.gaming;
+    libinput.enable = true;
     openssh.enable = true;
-    flatpak.enable = true;
-    blueman.enable = true;
 
     smartd = {
       enable = false;

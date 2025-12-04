@@ -1,21 +1,20 @@
-# charlie's dotfiles
+# charlotte's dotfiles
 
 > [!WARNING]
 > don't use these dotfiles if you don't know what you're doing. they can brick
-> your machine. charlie is not responsible if you use them to brick your
+> your machine. charlotte is not responsible if you use them to brick your
 > machine.
 
 the content of these dotfiles started as a fork of
-[ZaneyOS](https://gitlab.com/Zaney/zaneyos). much of the code in here is still
-explicitly from that repo. however, much of the content has been completely
-overhauled, including:
+[ZaneyOS](https://gitlab.com/Zaney/zaneyos). however, much of the content has
+been completely overhauled, including:
 
 - a wholly different [stylix](https://github.com/danth/stylix) theme, using
   [catppuccin](https://catppuccin.com/),
 - a totally different [waybar](https://github.com/Alexays/Waybar),
 - a highly customized [nvf](https://github.com/NotAShelf/nvf) configuration,
 - development environments powered by
-  [CharredLee/dev-templates](https://github.com/CharredLee/dev-templates),
+  [658060/dev-templates](https://github.com/658060/dev-templates),
 
 and more. also, some code (especially that of the waybar) is directly
 taken/converted into nix from

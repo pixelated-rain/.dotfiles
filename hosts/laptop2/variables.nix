@@ -1,14 +1,17 @@
 {
   # Git Configuration ( For Pulling Software Repos )
-  gitUsername = "CharredLee";
-  gitEmail = "31701136+CharredLee@users.noreply.github.com";
+  gitUsername = "658060";
+  gitEmail = "31701136+658060@users.noreply.github.com";
 
   # Hyprland Settings
   extraMonitorSettings = "
     monitor = ,1920x1080@60,auto,1
+    monitor = HDMI-A-1, 3840x2160@60,auto-left,1
   ";
   extraHardwareSettings = "";
   defaultWallpaper = "hollow-knight.png";
+
+  theme = "catppuccin-mocha";
 
   fontSizes = {
     applications = 14;
@@ -20,10 +23,16 @@
   # Waybar Settings
   clock24h = true;
 
+  # variables which toggle packages
+  gamedev = false;
+  gaming = false;
+  texlive = true;
+  silly = false;
+
   # Program Options
   browser = "zen"; # Set Default Browser (google-chrome-stable for google-chrome)
   terminal = "kitty"; # Set Default System Terminal
-  keyboardLayout = "us";
+  keyboardLayout = "";
   consoleKeyMap = "us";
 
   editor = "nvim";
