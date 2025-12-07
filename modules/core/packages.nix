@@ -30,6 +30,7 @@
   environment.systemPackages = with pkgs;
     [
       appimage-run
+      ardour
       audacity
       blender
       bolt-launcher
@@ -57,6 +58,7 @@
       libreoffice
       libvirt
       # linuxKernel.packages.linux_zen.openrazer
+      lmms
       lm_sensors
       lolcat
       lshw
