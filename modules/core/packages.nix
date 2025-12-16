@@ -78,6 +78,7 @@
       pkg-config
       playerctl
       polychromatic
+      polyphone
       qbittorrent-enhanced
       quickemu
       ripgrep
@@ -91,8 +92,10 @@
       virt-viewer
       vlc
       wget
-      ytmdl
+      xivlauncher
+      yt-dlp
       zoxide
+      zoom-us
     ]
     ++ lib.optionals config.variables.gaming [
       # TODO: move retroarch to ../home, add config
