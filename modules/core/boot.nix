@@ -13,16 +13,8 @@
     # loader.systemd-boot.enable = true;
     # loader.efi.canTouchEfiVariables = true;
     loader = {
+      systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
-      grub = {
-        enable = true;
-        device = "nodev";
-        efiSupport = true;
-        useOSProber = true;
-        gfxmodeEfi = "2560x1440";
-        # stylix manages grub theme
-        # theme = pkgs.catppuccin-grub;
-      };
     };
 
     # Appimage Support
