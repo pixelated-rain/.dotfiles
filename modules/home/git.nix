@@ -16,5 +16,6 @@ in {
         email = "${gitEmail}";
       };
     };
+    signing.format = "openpgp";
   };
 }

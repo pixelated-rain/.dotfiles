@@ -18,5 +18,7 @@
         sort_sensitive = false;
       };
     };
+
+    shellWrapperName = "yy";
   };
 }

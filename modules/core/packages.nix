@@ -46,7 +46,7 @@
       gimp
       # failed to build 2025-12-03
       # gpt4all
-      greetd.tuigreet
+      tuigreet
       htop
       hyprpicker
       imv
@@ -69,7 +69,7 @@
       mullvad-vpn
       ncdu
       ninja
-      nixfmt-rfc-style
+      nixfmt
       obs-studio
       opentabletdriver
       pavucontrol
@@ -103,7 +103,7 @@
       dolphin-emu # wii/gcn emu
       joycond
       joycond-cemuhook
-      melonDS #nds emu
+      melonds #nds emu
       prismlauncher # minecraft launcher
       # # fails to build 2026-01-01
       # retroarch-free # generic emu
