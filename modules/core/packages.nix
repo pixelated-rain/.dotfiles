@@ -68,6 +68,7 @@
       mpv
       mullvad-vpn
       ncdu
+      nethack
       ninja
       nixfmt
       obs-studio
