@@ -31,6 +31,7 @@
       appimage-run
       ardour
       audacity
+      awww
       blender
       bolt-launcher
       brightnessctl
@@ -62,7 +63,6 @@
       lm_sensors
       lolcat
       lshw
-      lutris
       lxqt.lxqt-policykit
       meson
       mpv

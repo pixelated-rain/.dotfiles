@@ -11,7 +11,7 @@ in {
   config = {
     stylix = {
       enable = true;
-      # not needed because wallpaper is managed by swww
+      # not needed because wallpaper is managed by awww
       # image = ../../wallpapers/hollow-knight.png;
 
       base16Scheme = palettes.activeBase16;
