@@ -35,6 +35,7 @@
       blender
       bolt-launcher
       brightnessctl
+      davinci-resolve
       discord
       docker-compose
       duf
@@ -66,7 +67,6 @@
       lxqt.lxqt-policykit
       meson
       mpv
-      mullvad-vpn
       ncdu
       nethack
       ninja

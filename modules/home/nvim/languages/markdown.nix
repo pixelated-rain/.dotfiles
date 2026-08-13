@@ -3,7 +3,6 @@
     enable = true;
     format = {
       enable = true;
-      extraFiletypes = ["mdx"];
     };
     lsp.enable = true;
     treesitter.enable = true;
