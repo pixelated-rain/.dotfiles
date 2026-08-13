@@ -68,7 +68,6 @@ in {
       };
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
@@ -128,7 +127,7 @@ in {
         "SUPER,Q,killactive,"
         "SUPER,P,exec,pypr toggle volume"
         "SUPER SHIFT,P,pseudo,"
-        "SUPER SHIFT,I,togglesplit,"
+        "SUPER SHIFT,I,layoutmsg,togglesplit,"
         "SUPER,F,fullscreen,"
         "SUPER CTRL,B,exec,pkill -SIGUSR1 waybar || waybar"
         "SUPER CONTROL,F,togglefloating,"
