@@ -28,6 +28,7 @@
 
   environment.systemPackages = with pkgs;
     [
+      pkgs.customPkgs.aladin
       appimage-run
       ardour
       audacity
@@ -43,6 +44,7 @@
       ffmpeg
       file-roller
       fzf
+      gaiasky
       # fails to build 2026-01-01
       # gemini-cli
       gimp
