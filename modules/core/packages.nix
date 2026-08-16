@@ -61,7 +61,6 @@
       libnotify
       libreoffice
       libvirt
-      # linuxKernel.packages.linux_zen.openrazer
       lmms
       lm_sensors
       lolcat
@@ -75,6 +74,7 @@
       nixfmt
       obs-studio
       opentabletdriver
+      openrazer-daemon
       pavucontrol
       pciutils
       picard
