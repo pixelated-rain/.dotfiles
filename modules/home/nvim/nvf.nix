@@ -22,7 +22,20 @@
           })
           vim.lsp.enable('qmlls')
         '';
+
+        basedpyright-setup = ''
+          vim.lsp.config('basedpyright', {
+            settings = {
+              basedpyright = {
+                analysis = {
+                  typeCheckingMode = 'off',
+                },
+              },
+            },
+          })
+        '';
       };
+
       extraPackages = with pkgs; [
         fd
         fzf
