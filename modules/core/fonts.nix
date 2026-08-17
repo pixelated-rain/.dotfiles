@@ -6,6 +6,8 @@
       font-awesome
       symbola
       material-icons
+      nerd-fonts.fira-code
+      cozette
     ];
   };
 }

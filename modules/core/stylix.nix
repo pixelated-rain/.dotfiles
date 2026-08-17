@@ -24,8 +24,8 @@ in {
       };
       fonts = {
         monospace = {
-          package = pkgs.nerd-fonts.fira-code;
-          name = "FiraCode Nerd Font";
+          package = pkgs.cozette;
+          name = "CozetteVector";
         };
         emoji = config.stylix.fonts.monospace;
         sansSerif = {

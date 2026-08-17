@@ -11,7 +11,6 @@
         modi = "drun,filebrowser,run";
         show-icons = true;
         icon-theme = "Papirus";
-        font = "FiraCode Nerd Font Mono 12";
         drun-display-format = "{icon} {name}";
         display-drun = " Apps";
         display-run = " Run";
@@ -21,6 +20,7 @@
         inherit (config.lib.formats.rasi) mkLiteral;
       in {
         "*" = {
+          font="CozetteVector 16";
           bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
           bg-alt = mkLiteral "#${config.stylix.base16Scheme.base0D}";
           foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
