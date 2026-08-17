@@ -28,7 +28,7 @@
             settings = {
               basedpyright = {
                 analysis = {
-                  typeCheckingMode = 'off',
+                  typeCheckingMode = 'strict',
                 },
               },
             },

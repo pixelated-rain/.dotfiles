@@ -3,7 +3,7 @@
     enable = true;
     dap.enable = true;
     format.enable = true;
-    lsp.enable = true;
+    lsp.enable = false;
     treesitter.enable = true;
   };
 }
