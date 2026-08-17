@@ -29,6 +29,7 @@
   environment.systemPackages = with pkgs;
     [
       pkgs.customPkgs.aladin
+      pkgs.customPkgs.docking
       appimage-run
       ardour
       audacity

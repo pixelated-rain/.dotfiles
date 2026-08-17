@@ -27,6 +27,7 @@ in {
         "lxqt-policykit-agent"
         "pypr &"
         "sleep 1.5 && awww img /home/${username}/Pictures/Wallpapers/${defaultWallpaper}"
+        "docking"
       ];
 
       input = {

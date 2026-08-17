@@ -2,4 +2,5 @@
   kingler = pkgs.callPackage ./kingler {};
   datacorn = pkgs.callPackage ./datacorn {};
   aladin = pkgs.callPackage ./aladin {};
+  docking = pkgs.callPackage ./docking {};
 }
