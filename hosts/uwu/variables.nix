@@ -21,12 +21,12 @@
   theme = "catppuccin-mocha";
 
   fontSizes = {
-    applications = 14;
-    terminal = 18;
-    desktop = 12;
-    popups = 12;
+    applications = 16;
+    terminal = 24;
+    desktop = 14;
+    popups = 14;
   };
-  defaultWallpaper = "star-trail.jpg";
+  defaultWallpaper = "foxies.gif";
 
   # Waybar Settings
   clock24h = false;
