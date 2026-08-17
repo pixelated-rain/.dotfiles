@@ -23,6 +23,7 @@ _: {
     ./nano.nix
     ./nvim
     ./obsidian.nix
+    ./pcmanfm-qt.nix
     ./rofi
     ./qt.nix
     ./quickshell

@@ -77,6 +77,7 @@
       openrazer-daemon
       pavucontrol
       pciutils
+      pcmanfm-qt
       picard
       pkg-config
       playerctl
