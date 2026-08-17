@@ -12,6 +12,7 @@
     joycond.enable = config.variables.gaming;
     libinput.enable = true;
     openssh.enable = true;
+    tumbler.enable = true;
 
     smartd = {
       enable = false;
