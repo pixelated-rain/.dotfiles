@@ -1,22 +1,22 @@
 {
+  # Host identity ( read by flake.nix to wire drivers + user )
+  profile = "nvidia-laptop"; # driver bundle under ./profiles
+  user = "amelia";
+
   # Git Configuration ( For Pulling Software Repos )
   gitUsername = "pixelated-rain";
   gitEmail = "dreamsofsoftrain@gmail.com";
 
-  # Hyprland Settings
-  extraMonitorSettings = "
-    monitor = DP-3,3840x2160@60.0Hz,0x0,1.0
-    monitor = eDP-1,1920x1080@60.00Hz,auto-right,1.0
-  ";
-  extraHardwareSettings = "
-    opengl {
-      nvidia_anti_flicker = 0
-    }
+  # Only keys that differ from the modules/core/variables.nix defaults.
+  extraMonitorSettings = [
+    { output = "DP-3"; mode = "3840x2160@60.0Hz"; position = "0x0"; scale = "1.0"; }
+    { output = "eDP-1"; mode = "1920x1080@60.0Hz"; position = "auto-right"; scale = "1.0"; }
+  ];
 
-    debug {
-      damage_tracking = 0
-    } 
-  ";
+  extraHardwareSettings = {
+    opengl = { nvidia_anti_flicker = 0; };
+    debug  = { damage_tracking = 0; };
+  };
 
   theme = "catppuccin-mocha";
 
@@ -26,6 +26,7 @@
     desktop = 14;
     popups = 14;
   };
+
   defaultWallpaper = "foxies.gif";
 
   # Waybar Settings

@@ -1,6 +1,8 @@
-{ pkgs, ... }:
-
 {
+  pkgs,
+  config,
+  ...
+}: {
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";

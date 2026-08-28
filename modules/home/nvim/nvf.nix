@@ -80,6 +80,7 @@
       };
 
       lsp = {
+        enable = true;
         formatOnSave = true;
         lspkind.enable = false;
         lightbulb.enable = true;

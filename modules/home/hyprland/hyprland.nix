@@ -16,13 +16,13 @@
   ];
   wayland.windowManager.hyprland = {
     enable = true;
-    configType = "hyprlang";
     xwayland = {
       enable = true;
       # hidpi = true;
     };
     # enableNvidiaPatches = false;
     systemd.enable = true;
+    configType = "lua";
   };
   # Place Files Inside Home Directory
   home.file = {
