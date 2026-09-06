@@ -76,6 +76,7 @@
       obs-studio
       opentabletdriver
       openrazer-daemon
+      openutau
       pavucontrol
       pciutils
       pcmanfm-qt
