@@ -85,6 +85,7 @@
       playerctl
       polychromatic
       polyphone
+      proton-vpn
       qbittorrent-enhanced
       quickemu
       ripgrep
