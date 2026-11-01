@@ -3,6 +3,7 @@
     ./boot.nix
     ./cron.nix
     ./fonts.nix
+    ./gnome.nix
     ./greetd.nix
     ./hardware.nix
     ./ld.nix
