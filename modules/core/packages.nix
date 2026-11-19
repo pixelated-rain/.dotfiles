@@ -74,6 +74,7 @@
       ninja
       nixfmt
       obs-studio
+      obsidian
       opentabletdriver
       openrazer-daemon
       openutau
