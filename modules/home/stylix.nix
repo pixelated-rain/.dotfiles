@@ -1,5 +1,6 @@
 _: {
   stylix.targets = {
+    wayprompt.enable = false;
     waybar.enable = false;
     rofi.enable = false;
     hyprland.enable = false;

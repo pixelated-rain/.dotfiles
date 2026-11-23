@@ -78,6 +78,7 @@
       opentabletdriver
       openrazer-daemon
       openutau
+      osu-lazer-bin
       pavucontrol
       pciutils
       pcmanfm-qt

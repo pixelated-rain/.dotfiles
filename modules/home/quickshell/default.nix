@@ -46,7 +46,7 @@
     }
   '';
 in {
-  home.packages = [inputs.quickshell.packages.${pkgs.stdenv.hostPlatform.system}.default];
+  home.packages = [pkgs.quickshell];
 
   xdg.configFile = {
     # Generated palette (pure, store-only — palette is Nix-driven by design).

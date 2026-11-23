@@ -38,9 +38,6 @@
     overlays = [
       (final: prev: {
         customPkgs = import ./modules/packages {pkgs = prev;};
-        waybar = prev.waybar.overrideAttrs (old: {
-          patches = (old.patches or []) ++ [ ./modules/home/waybar/hyprland-lua-dispatch.patch ];
-        });
       })
     ];
 
